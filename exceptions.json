@@ -1,0 +1,234 @@
+{
+  "TRUMP": {
+    "synonyms": ["TRUMPOFFICIAL"],
+    "mexc_spot": "TRUMPUSDT",
+    "mexc_fut": "TRUMPOFFICIAL_USDT",
+    "bitget_fut": "TRUMPUSDT_UMBCL",
+    "gate_fut": "TRUMP_USDT"
+  },
+  "ARC": {
+    "synonyms": ["ARCSOL"],
+    "mexc_spot": "ARCSOLUSDT",
+    "mexc_fut": "ARCUSDT",
+    "bitget_fut": "ARCUSDT",
+    "gate_fut": "ARC_USDT"
+  },
+  "ALT": {
+    "synonyms": ["ALTLAYER"],
+    "mexc_spot": "ALTLAYERUSDT",
+    "mexc_fut": "ALT_USDT",
+    "bitget_fut": "ALTUSDT",
+    "gate_fut": "ALT_USDT"
+  },
+  "X": {
+    "synonyms": ["X"],
+    "bitget_spot": "XUSDT",
+    "bitget_fut": "XUSDT",
+    "gate_fut": "X_USDT",
+    "blacklist": ["mexc_spot", "mexc_fut"]
+  },
+  "CULT": {
+    "synonyms": ["MILADYCULT"],
+    "mexc_spot": "CULTUSDT",
+    "mexc_fut": "CULT_USDT"
+  },
+  "BEAM": {
+    "synonyms": ["BEAMX"],
+    "mexc_spot": "BEAMXUSDT",
+    "mexc_fut": "BEAMX_USDT",
+    "bitget_fut": "BEAMUSDT",
+    "gate_fut": "BEAMX_USDT"
+  },
+  "TST": {
+    "synonyms": ["TSTBSC"],
+    "mexc_spot": "TSTUSDT",
+    "mexc_fut": "TST_USDT",
+    "bitget_fut": "TSTBSCUSDT",
+    "gate_fut": "TSTBSC_USDT"
+  },
+  "GTC": {
+    "synonyms": ["GTC"],
+    "mexc_spot": "GTCUSDT",
+    "mexc_fut": "GTC_USDT",
+    "bitget_fut": "GTCUSDT",
+    "blacklist": ["gate_fut"]
+  },
+  "QI": {
+    "synonyms": ["BENQI"],
+    "mexc_spot": "BENQI_USDT",
+    "mexc_fut": "QI_USDT"
+  },
+  "SNT": {
+    "synonyms": ["SNT"],
+    "mexc_spot": "SNTUSDT",
+    "mexc_fut": "SNTUSDT",
+    "bitget_fut": "SNT_USDT",
+    "bitget_spot": "SNT_USDT",
+    "gate_spot": "SNTUSDT",
+    "gate_fut": "SNTUSDT",
+    "blacklist": ["binance_fut"]
+  },
+  "XMR": {
+    "synonyms": ["XMR"],
+    "mexc_spot": "XMR_USDT",
+    "mexc_fut": "XMR_USDT",
+    "binance_fut": "XMRUSDT",
+    "blacklist": ["gate_fut"]
+  },
+  "BAL": {
+    "synonyms": ["BAL"],
+    "mexc_spot": "BAL_USDT",
+    "mexc_fut": "BAL_USDT",
+    "gate_fut": "BAL_USDT",
+    "blacklist": ["binance_fut"]
+  },
+    "BADGER": {
+    "synonyms": ["BADGER"],
+    "mexc_spot": "BADGER_USDT",
+    "mexc_fut": "BADGER_USDT",
+    "bitget_fut": "BADGER_USDT",
+    "gate_fut": "BADGER_USDT",
+    "blacklist": ["binance_fut","bingx_fut"]
+  },
+  "ALL": {
+    "synonyms": ["ALL"],
+    "mexc_fut": "ALLUSDT",
+    "gate_fut": "ALL_USDT",
+    "binance_fut": "ALLUSDT",
+    "blacklist": ["mexc_spot", "bingx_spot", "bitget_fut"]
+  },
+  "ALPACA": {
+    "synonyms": ["ALPACA"],
+    "gate_fut": "ALPACA_USDT",
+    "bingx_spot": "ALPACAUSDT",
+    "blacklist": ["binance_fut", "mexc_fut", "mexc_spot", "bitget_fut"]
+  },
+  "ORBS": {
+    "synonyms": ["ORBS"],
+    "gate_fut": "ORBS_USDT",
+    "bingx_spot": "ORBSUSDT",
+    "mexc_fut": "ORBS_USDT",
+    "blacklist": ["binance_fut", "mexc_spot", "bitget_fut"]
+  },
+  "GLMR": {
+    "synonyms": ["GLMR"],
+    "gate_fut": "GLMR_USDT",
+    "mexc_spot": "GLMR_USDT",
+    "mexc_fut": "GLMR_USDT",
+    "blacklist": ["binance_fut", "bingx_spot"]
+  },
+  "NEIRO": {
+    "synonyms": ["NEIROCTO"],
+    "mexc_fut": "NEIROCTO_USDT",
+    "bingx_spot": "NEIROCTOUSDT",
+    "binance_fut": "NEIROUSDT",
+    "bitget_fut": "NEIROCTOUSDT",
+    "gate_fut": "NEIROCTO_USDT",
+    "blacklist": ["mexc_spot"]
+  },
+  "BLZ": {
+    "synonyms": ["BLZ"],
+    "mexc_spot": "BLZ_USDT",
+    "mexc_fut": "BLZ_USDT",
+    "bingx_spot": "BLZUSDT",
+    "blacklist": ["binance_fut", "bitget_fut", "gate_fut"]
+  },
+  "XEM": {
+    "synonyms": ["XEM"],
+    "mexc_fut": "XEM_USDT",
+    "bingx_spot": "XEMUSDT",
+    "gate_fut": "XEM_USDT",
+    "blacklist": ["mexc_spot", "binance_fut", "bitget_fut"]
+  },
+  "IDEX": {
+    "synonyms": ["IDEX"],
+    "mexc_spot": "IDEX_USDT",
+    "mexc_fut": "IDEX_USDT",
+    "bingx_spot": "IDEXUSDT",
+    "gate_fut": "IDEX_USDT",
+    "blacklist": ["binance_fut", "bitget_fut"]
+  },
+  "MEMEFI": {
+    "synonyms": ["MEMEFI"],
+    "mexc_spot": "MEMEFI_USDT",
+    "bingx_spot": "MEMEFIUSDT",
+    "gate_fut": "MEMEFI_USDT",
+    "blacklist": ["mexc_fut", "binance_fut", "bitget_fut"]
+  },
+  "RAD": {
+    "synonyms": ["RAD"],
+    "mexc_spot": "RAD_USDT",
+    "mexc_fut": "RAD_USDT",
+    "bingx_spot": "RADUSDT",
+    "bitget_fut": "RADUSDT",
+    "gate_fut": "RAD_USDT",
+    "blacklist": ["binance_fut"]
+  },
+  "META": {
+    "synonyms": ["METAX", "METAON"],
+    "mexc_spot": "METAON_USDT",
+    "bingx_spot": "METAXUSDT",
+    "bitget_fut": "METAUSDT",
+    "blacklist": ["mexc_fut", "binance_fut", "gate_fut"]
+  },
+  "VELO": {
+    "synonyms": ["VELODROME"],
+    "mexc_spot": "VELODROME_USDT",
+    "mexc_fut": "VELODROME_USDT",
+    "bingx_spot": "VELODROMEUSDT",
+    "binance_fut": "VELODROMEUSDT",
+    "bitget_fut": "VELODROMEUSDT",
+    "gate_fut": "VELODROME_USDT",
+    "blacklist": [""]
+  },
+  "MDT": {
+    "synonyms": ["MDT"],
+    "mexc_fut": "MDT_USDT",
+    "bingx_spot": "MDTUSDT",
+    "bitget_fut": "MDTUSDT",
+    "gate_fut": "MDT_USDT",
+    "blacklist": ["mexc_spot", "binance_fut"]
+  },
+  "UNFI": {
+    "synonyms": ["UNFI"],
+    "mexc_spot": "UNFI_USDT",
+    "bingx_spot": "UNFIUSDT",
+    "gate_fut": "UNFI_USDT",
+    "blacklist": ["mexc_fut", "binance_fut", "bitget_fut"]
+  },
+  "LEVER": {
+    "synonyms": ["LEVER"],
+    "mexc_spot": "LEVER_USDT",
+    "mexc_fut": "LEVER_USDT",
+    "bingx_spot": "LEVERUSDT",
+    "gate_fut": "LEVER_USDT",
+    "blacklist": ["binance_fut", "bitget_fut"]
+  },
+  "ZK": {
+    "synonyms": ["ZKSYNC"],
+    "mexc_spot": "ZK_USDT",
+    "mexc_fut": "ZKSYNC_USDT",
+    "bingx_spot": "ZKUSDT",
+    "binance_fut": "ZKUSDT",
+    "bitget_fut": "ZKUSDT",
+    "gate_fut": "ZK_USDT",
+    "blacklist": [""]
+  },
+  "REN": {
+    "synonyms": ["RENDER"],
+    "mexc_spot": "RENDER_USDT",
+    "mexc_fut": "RENDER_USDT",
+    "bingx_spot": "RENDERUSDT",
+    "binance_fut": "RENDERUSDT",
+    "bitget_fut": "RENDERUSDT",
+    "gate_fut": "RENDER_USDT",
+    "blacklist": [""]
+  },
+  "DGB": {
+    "synonyms": ["DGB"],
+    "mexc_fut": "DGB_USDT",
+    "bingx_spot": "DGBUSDT",
+    "gate_fut": "DGB_USDT",
+    "blacklist": ["mexc_spot", "binance_fut", "bitget_fut"]
+  }
+}
