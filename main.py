@@ -9,6 +9,7 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from telebot.async_telebot import AsyncTeleBot
 from telebot import types
 from collections import defaultdict
+import maintenance
 from db import (
     init_db, get_user, add_user, update_user,
     USERS_CACHE, load_users_cache, refresh_users_cache_periodically,
@@ -379,19 +380,21 @@ async def _check_and_alert():
                             should_send = False
 
                     if should_send:
-                        text = f"Монета: {symbol}\n\n"
+                        text = f"Монета: <b>{symbol}</b>\n\n"
                         for e in entries:
+                            dep1, wdr1 = await get_symbol_status(e["src1"], symbol)
+                            dep2, wdr2 = await get_symbol_status(e["src2"], symbol)
+
                             text += (
                                 f'<a href="{e["url1"]}">{EXCHANGE_NAMES.get(e["src1"], e["src1"])}</a> 🔄 '
                                 f'<a href="{e["url2"]}">{EXCHANGE_NAMES.get(e["src2"], e["src2"])}</a>\n'
                                 f'📈 Спред: {e["spread"]:.2f}%\n'
                                 f'💰 {EXCHANGE_NAMES.get(e["src1"], e["src1"])}: {e["p1"]:.6f}\n'
                                 f'💰 {EXCHANGE_NAMES.get(e["src2"], e["src2"])}: {e["p2"]:.6f}\n\n'
+                                f'Депозит: {"✅" if dep1 or dep2 else "❌"}\n'
+                                f'Вывод: {"✅" if wdr1 or wdr2 else "❌"}\n\n'
                             )
-                            dep1, wdr1 = await get_symbol_status(e["src1"], symbol)
-                            dep2, wdr2 = await get_symbol_status(e["src2"], symbol)
-                            text += f"Депозит: {'✅' if (dep1 and dep2) else '❌'}\n"
-                            text += f"Вывод: {'✅' if (wdr1 and wdr2) else '❌'}\n\n"
+
                         text += f"🔖 Тикер: <code>{symbol}</code>"
 
                         send_tasks.append(
@@ -748,6 +751,7 @@ async def main():
         misfire_grace_time=30,
         id="check_and_alert"
     )
+    await maintenance.start_background_tasks(bot)
     scheduler.start()
 
     logger.info("🤖 Бот запущен.")

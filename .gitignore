@@ -3,3 +3,4 @@ config.py
 *.sqlite
 __pycache__/
 *.log
+.env
