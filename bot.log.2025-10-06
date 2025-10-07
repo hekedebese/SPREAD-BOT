@@ -1,0 +1,303 @@
+2025-10-06 13:44:06 | INFO | bot | Использую базу: C:\Users\90533\PC\Desktop\сспред\bot.db
+2025-10-06 13:44:06 | INFO | bot | [DB] get_all_users_full вернул: 3 строк
+2025-10-06 13:44:06 | INFO | bot | [DB] user_id=496805427, subscription=1, trial_end_raw=2025-09-07 10:26:39.942042, trial_end_parsed=2025-09-07 10:26:39.942042+00:00, filter=5-12%
+2025-10-06 13:44:06 | INFO | bot | [DB] user_id=940868721, subscription=1, trial_end_raw=2025-10-18 12:53:23.521462, trial_end_parsed=2025-10-18 12:53:23.521462+00:00, filter=5-12%
+2025-10-06 13:44:06 | INFO | bot | [DB] user_id=1879112903, subscription=1, trial_end_raw=2025-10-17 09:16:25.652845, trial_end_parsed=2025-10-17 09:16:25.652845+00:00, filter=5-12%
+2025-10-06 13:44:06 | INFO | bot | [DB] USERS_CACHE заполнен: 3 записей
+2025-10-06 13:44:06 | INFO | bot | [main] USERS_CACHE загружен: 3 записей.
+2025-10-06 13:44:06 | INFO | bot | [main] sample -> 496805427: {'subscription': 1, 'trial_end': datetime.datetime(2025, 9, 7, 10, 26, 39, 942042, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-06 13:44:06 | INFO | bot | [main] sample -> 940868721: {'subscription': 1, 'trial_end': datetime.datetime(2025, 10, 18, 12, 53, 23, 521462, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-06 13:44:06 | INFO | bot | [main] sample -> 1879112903: {'subscription': 1, 'trial_end': datetime.datetime(2025, 10, 17, 9, 16, 25, 652845, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-06 13:44:06 | INFO | bot | [DB:update_user] user_id=1879112903 incoming kwargs={'subscription': 1}
+2025-10-06 13:44:06 | INFO | bot | [DB:update_user] user_id=1879112903 after update filter_value='5-12%' kwargs={'subscription': 1}
+2025-10-06 13:44:06 | INFO | bot | [DB:update_user] user_id=496805427 incoming kwargs={'subscription': 1}
+2025-10-06 13:44:06 | INFO | bot | [DB:update_user] user_id=496805427 after update filter_value='5-12%' kwargs={'subscription': 1}
+2025-10-06 13:44:06 | INFO | bot | [DB:update_user] user_id=940868721 incoming kwargs={'subscription': 1}
+2025-10-06 13:44:06 | INFO | bot | [DB:update_user] user_id=940868721 after update filter_value='5-12%' kwargs={'subscription': 1}
+2025-10-06 13:44:06 | INFO | bot | 🤖 Бот запущен.
+2025-10-06 13:44:06 | INFO | bot | [DB] get_all_users_full вернул: 3 строк
+2025-10-06 13:44:06 | INFO | bot | [DB] user_id=496805427, subscription=1, trial_end_raw=2025-09-07 10:26:39.942042, trial_end_parsed=2025-09-07 10:26:39.942042+00:00, filter=5-12%
+2025-10-06 13:44:06 | INFO | bot | [DB] user_id=940868721, subscription=1, trial_end_raw=2025-10-18 12:53:23.521462, trial_end_parsed=2025-10-18 12:53:23.521462+00:00, filter=5-12%
+2025-10-06 13:44:06 | INFO | bot | [DB] user_id=1879112903, subscription=1, trial_end_raw=2025-10-17 09:16:25.652845, trial_end_parsed=2025-10-17 09:16:25.652845+00:00, filter=5-12%
+2025-10-06 13:44:06 | INFO | bot | [DB] USERS_CACHE заполнен: 3 записей
+2025-10-06 13:45:06 | INFO | bot | START _check_and_alert
+2025-10-06 13:45:09 | INFO | bot | Загружено сырых данных: 5837 монет c 6 источников; детали: {'mexc_spot': 2217, 'mexc_fut': 824, 'bitget_fut': 581, 'gate_fut': 614, 'binance_fut': 550, 'bingx_spot': 1051}
+2025-10-06 13:45:09 | INFO | bot | После нормализации: 2569 монет
+2025-10-06 13:45:09 | INFO | bot | После фильтрации (подходящие пары рынков): 798 монет
+2025-10-06 13:45:09 | INFO | bot | USERS_CACHE size: 3
+2025-10-06 13:45:09 | INFO | bot | USERS_CACHE sample -> 496805427: {'subscription': 1, 'trial_end': datetime.datetime(2025, 9, 7, 10, 26, 39, 942042, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-06 13:45:09 | INFO | bot | USERS_CACHE sample -> 940868721: {'subscription': 1, 'trial_end': datetime.datetime(2025, 10, 18, 12, 53, 23, 521462, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-06 13:45:09 | INFO | bot | USERS_CACHE sample -> 1879112903: {'subscription': 1, 'trial_end': datetime.datetime(2025, 10, 17, 9, 16, 25, 652845, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-06 13:45:11 | INFO | bot | [mexc_status] MATCH SYND -> deposit=False, withdraw=False
+2025-10-06 13:45:11 | INFO | bot | [SYND] user 496805427 — отправлено сообщение с 1 спредами
+2025-10-06 13:45:11 | INFO | bot | [SYND] user 940868721 — отправлено сообщение с 1 спредами
+2025-10-06 13:45:11 | INFO | bot | [SYND] user 1879112903 — отправлено сообщение с 1 спредами
+2025-10-06 13:45:14 | INFO | bot | [mexc_status] MATCH BAGWORK -> deposit=False, withdraw=False
+2025-10-06 13:45:14 | INFO | bot | [BAGWORK] user 496805427 — отправлено сообщение с 1 спредами
+2025-10-06 13:45:14 | INFO | bot | [BAGWORK] user 940868721 — отправлено сообщение с 1 спредами
+2025-10-06 13:45:14 | INFO | bot | [BAGWORK] user 1879112903 — отправлено сообщение с 1 спредами
+2025-10-06 13:45:16 | INFO | bot | [mexc_status] MATCH A8 -> deposit=False, withdraw=False
+2025-10-06 13:45:19 | INFO | bot | [A8] user 496805427 — отправлено сообщение с 2 спредами
+2025-10-06 13:45:19 | INFO | bot | [A8] user 940868721 — отправлено сообщение с 2 спредами
+2025-10-06 13:45:19 | INFO | bot | [A8] user 1879112903 — отправлено сообщение с 2 спредами
+2025-10-06 13:45:23 | INFO | bot | [M] user 496805427 — отправлено сообщение с 2 спредами
+2025-10-06 13:45:23 | INFO | bot | [M] user 940868721 — отправлено сообщение с 2 спредами
+2025-10-06 13:45:23 | INFO | bot | [M] user 1879112903 — отправлено сообщение с 2 спредами
+2025-10-06 13:45:25 | INFO | bot | [mexc_status] MATCH CARDS -> deposit=False, withdraw=False
+2025-10-06 13:45:25 | INFO | bot | [CARDS] user 496805427 — отправлено сообщение с 1 спредами
+2025-10-06 13:45:25 | INFO | bot | [CARDS] user 940868721 — отправлено сообщение с 1 спредами
+2025-10-06 13:45:25 | INFO | bot | [CARDS] user 1879112903 — отправлено сообщение с 1 спредами
+2025-10-06 13:45:28 | INFO | bot | [mexc_status] MATCH BDXN -> deposit=False, withdraw=False
+2025-10-06 13:45:32 | WARNING | bot | [binance_status] No match for BDXN
+2025-10-06 13:45:32 | INFO | bot | [BDXN] user 496805427 — отправлено сообщение с 3 спредами
+2025-10-06 13:45:32 | INFO | bot | [BDXN] user 940868721 — отправлено сообщение с 3 спредами
+2025-10-06 13:45:32 | INFO | bot | [BDXN] user 1879112903 — отправлено сообщение с 3 спредами
+2025-10-06 13:45:35 | INFO | bot | [mexc_status] MATCH MAMO -> deposit=False, withdraw=False
+2025-10-06 13:45:35 | INFO | bot | [MAMO] user 496805427 — отправлено сообщение с 1 спредами
+2025-10-06 13:45:35 | INFO | bot | [MAMO] user 940868721 — отправлено сообщение с 1 спредами
+2025-10-06 13:45:35 | INFO | bot | [MAMO] user 1879112903 — отправлено сообщение с 1 спредами
+2025-10-06 13:45:36 | WARNING | bot | [mexc_status] NO MATCH for ALL, sample=[{'coin': 'CATCHOLD', 'name': 'SpaceCatch', 'networkList': [{'coin': 'CATCHOLD', 'depositDesc': 'Deposit is prohibited (forced deposit may result in asset loss)', 'depositEnable': False, 'minConfirm': 100, 'name': 'SpaceCatch', 'network': 'Arbitrum One(ARB)', 'withdrawEnable': True, 'withdrawFee': '0', 'withdrawIntegerMultiple': None, 'withdrawMax': '100000', 'withdrawMin': '1', 'sameAddress': False, 'contract': '0xf0a479C9c3378638EC603b8B6B0d75903902550B', 'withdrawTips': None, 'depositTips': None, 'netWork': 'ARB'}]}, {'coin': 'STPT', 'name': 'STP', 'networkList': [{'coin': 'STPT', 'depositDesc': 'Deposit suspended as project upgrade is in progress', 'depositEnable': False, 'minConfirm': 96, 'name': 'STP', 'network': 'NONE', 'withdrawEnable': False, 'withdrawFee': '0', 'withdrawIntegerMultiple': None, 'withdrawMax': '800000000', 'withdrawMin': '800000000', 'sameAddress': False, 'contract': '0xDe7D85157d9714EADf595045CC12Ca4A5f3E2aDb', 'withdrawTips': None, 'depositTips': None, 'netWork': 'NONE'}]}, {'coin': 'BBC', 'name': 'ByByeCar', 'networkList': [{'coin': 'BBC', 'depositDesc': 'Deposit is prohibited (forced deposit may result in asset loss)', 'depositEnable': False, 'minConfirm': 20, 'name': 'ByByeCar', 'network': 'Tron(TRC20)', 'withdrawEnable': True, 'withdrawFee': '0', 'withdrawIntegerMultiple': None, 'withdrawMax': '200000', 'withdrawMin': '1', 'sameAddress': False, 'contract': 'TRrkeSxEypfiTn7gU3Gg3tP756cEhK493b', 'withdrawTips': '', 'depositTips': '', 'netWork': 'TRX'}]}]
+2025-10-06 13:45:40 | WARNING | bot | [binance_status] No match for ALL
+2025-10-06 13:45:40 | INFO | bot | [ALL] user 496805427 — отправлено сообщение с 2 спредами
+2025-10-06 13:45:40 | INFO | bot | [ALL] user 940868721 — отправлено сообщение с 2 спредами
+2025-10-06 13:45:40 | INFO | bot | [ALL] user 1879112903 — отправлено сообщение с 2 спредами
+2025-10-06 13:45:41 | INFO | bot | END _check_and_alert | пар проверено: 7298, уведомлений поставлено в очередь: 24, время: 34.88 сек.
+2025-10-06 13:46:06 | INFO | bot | START _check_and_alert
+2025-10-06 13:46:09 | INFO | bot | Загружено сырых данных: 5837 монет c 6 источников; детали: {'mexc_spot': 2217, 'mexc_fut': 824, 'bitget_fut': 581, 'gate_fut': 614, 'binance_fut': 550, 'bingx_spot': 1051}
+2025-10-06 13:46:09 | INFO | bot | После нормализации: 2569 монет
+2025-10-06 13:46:09 | INFO | bot | После фильтрации (подходящие пары рынков): 798 монет
+2025-10-06 13:46:09 | INFO | bot | USERS_CACHE size: 3
+2025-10-06 13:46:09 | INFO | bot | USERS_CACHE sample -> 496805427: {'subscription': 1, 'trial_end': datetime.datetime(2025, 9, 7, 10, 26, 39, 942042, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1, 'collected_spreads': {}}
+2025-10-06 13:46:09 | INFO | bot | USERS_CACHE sample -> 940868721: {'subscription': 1, 'trial_end': datetime.datetime(2025, 10, 18, 12, 53, 23, 521462, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1, 'collected_spreads': {}}
+2025-10-06 13:46:09 | INFO | bot | USERS_CACHE sample -> 1879112903: {'subscription': 1, 'trial_end': datetime.datetime(2025, 10, 17, 9, 16, 25, 652845, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1, 'collected_spreads': {}}
+2025-10-06 13:46:10 | INFO | bot | [mexc_status] MATCH COAI -> deposit=False, withdraw=False
+2025-10-06 13:46:15 | WARNING | bot | [binance_status] No match for COAI
+2025-10-06 13:46:15 | INFO | bot | [COAI] user 496805427 — отправлено сообщение с 4 спредами
+2025-10-06 13:46:15 | INFO | bot | [COAI] user 940868721 — отправлено сообщение с 4 спредами
+2025-10-06 13:46:15 | INFO | bot | [COAI] user 1879112903 — отправлено сообщение с 4 спредами
+2025-10-06 13:46:18 | INFO | bot | [mexc_status] MATCH LEVER -> deposit=False, withdraw=False
+2025-10-06 13:46:21 | INFO | bot | [LEVER] user 496805427 — отправлено сообщение с 2 спредами
+2025-10-06 13:46:21 | INFO | bot | [LEVER] user 940868721 — отправлено сообщение с 2 спредами
+2025-10-06 13:46:21 | INFO | bot | [LEVER] user 1879112903 — отправлено сообщение с 2 спредами
+2025-10-06 13:46:22 | INFO | bot | END _check_and_alert | пар проверено: 7298, уведомлений поставлено в очередь: 6, время: 15.69 сек.
+2025-10-06 13:46:29 | ERROR | TeleBot | Infinity polling: polling exited
+2025-10-06 13:46:29 | ERROR | TeleBot | Break infinity polling
+2025-10-06 13:59:03 | INFO | bot | Использую базу: C:\Users\90533\PC\Desktop\сспред\bot.db
+2025-10-06 13:59:03 | INFO | bot | [DB] get_all_users_full вернул: 3 строк
+2025-10-06 13:59:03 | INFO | bot | [DB] user_id=496805427, subscription=1, trial_end_raw=2025-09-07 10:26:39.942042, trial_end_parsed=2025-09-07 10:26:39.942042+00:00, filter=5-12%
+2025-10-06 13:59:03 | INFO | bot | [DB] user_id=940868721, subscription=1, trial_end_raw=2025-10-18 12:53:23.521462, trial_end_parsed=2025-10-18 12:53:23.521462+00:00, filter=5-12%
+2025-10-06 13:59:03 | INFO | bot | [DB] user_id=1879112903, subscription=1, trial_end_raw=2025-10-17 09:16:25.652845, trial_end_parsed=2025-10-17 09:16:25.652845+00:00, filter=5-12%
+2025-10-06 13:59:03 | INFO | bot | [DB] USERS_CACHE заполнен: 3 записей
+2025-10-06 13:59:03 | INFO | bot | [main] USERS_CACHE загружен: 3 записей.
+2025-10-06 13:59:03 | INFO | bot | [main] sample -> 496805427: {'subscription': 1, 'trial_end': datetime.datetime(2025, 9, 7, 10, 26, 39, 942042, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-06 13:59:03 | INFO | bot | [main] sample -> 940868721: {'subscription': 1, 'trial_end': datetime.datetime(2025, 10, 18, 12, 53, 23, 521462, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-06 13:59:03 | INFO | bot | [main] sample -> 1879112903: {'subscription': 1, 'trial_end': datetime.datetime(2025, 10, 17, 9, 16, 25, 652845, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-06 13:59:03 | INFO | bot | [DB:update_user] user_id=1879112903 incoming kwargs={'subscription': 1}
+2025-10-06 13:59:03 | INFO | bot | [DB:update_user] user_id=1879112903 after update filter_value='5-12%' kwargs={'subscription': 1}
+2025-10-06 13:59:03 | INFO | bot | [DB:update_user] user_id=496805427 incoming kwargs={'subscription': 1}
+2025-10-06 13:59:03 | INFO | bot | [DB:update_user] user_id=496805427 after update filter_value='5-12%' kwargs={'subscription': 1}
+2025-10-06 13:59:03 | INFO | bot | [DB:update_user] user_id=940868721 incoming kwargs={'subscription': 1}
+2025-10-06 13:59:03 | INFO | bot | [DB:update_user] user_id=940868721 after update filter_value='5-12%' kwargs={'subscription': 1}
+2025-10-06 13:59:03 | INFO | bot | [maintenance] background tasks started
+2025-10-06 13:59:03 | INFO | bot | 🤖 Бот запущен.
+2025-10-06 13:59:03 | INFO | bot | [maintenance] daily_backup_task sleeping 46856.9s until 2025-10-07T00:00:00+00:00
+2025-10-06 13:59:03 | INFO | bot | [maintenance] Добавлен столбец last_active
+2025-10-06 13:59:03 | INFO | bot | [maintenance] Добавлен столбец is_active
+2025-10-06 13:59:03 | INFO | bot | [maintenance] daily_summary_task sleeping 50456.9s until 2025-10-07T01:00:00+00:00
+2025-10-06 13:59:03 | INFO | bot | [DB] get_all_users_full вернул: 3 строк
+2025-10-06 13:59:03 | INFO | bot | [DB] user_id=496805427, subscription=1, trial_end_raw=2025-09-07 10:26:39.942042, trial_end_parsed=2025-09-07 10:26:39.942042+00:00, filter=5-12%
+2025-10-06 13:59:03 | INFO | bot | [DB] user_id=940868721, subscription=1, trial_end_raw=2025-10-18 12:53:23.521462, trial_end_parsed=2025-10-18 12:53:23.521462+00:00, filter=5-12%
+2025-10-06 13:59:03 | INFO | bot | [DB] user_id=1879112903, subscription=1, trial_end_raw=2025-10-17 09:16:25.652845, trial_end_parsed=2025-10-17 09:16:25.652845+00:00, filter=5-12%
+2025-10-06 13:59:03 | INFO | bot | [DB] USERS_CACHE заполнен: 3 записей
+2025-10-06 13:59:26 | INFO | bot | [DB:update_user] user_id=1879112903 incoming kwargs={'subscription': 1}
+2025-10-06 13:59:26 | INFO | bot | [DB:update_user] user_id=1879112903 after update filter_value='5-12%' kwargs={'subscription': 1}
+2025-10-06 13:59:26 | INFO | bot | [DB] get_all_users_full вернул: 3 строк
+2025-10-06 13:59:26 | INFO | bot | [DB] user_id=496805427, subscription=1, trial_end_raw=2025-09-07 10:26:39.942042, trial_end_parsed=2025-09-07 10:26:39.942042+00:00, filter=5-12%
+2025-10-06 13:59:26 | INFO | bot | [DB] user_id=940868721, subscription=1, trial_end_raw=2025-10-18 12:53:23.521462, trial_end_parsed=2025-10-18 12:53:23.521462+00:00, filter=5-12%
+2025-10-06 13:59:26 | INFO | bot | [DB] user_id=1879112903, subscription=1, trial_end_raw=2025-10-17 09:16:25.652845, trial_end_parsed=2025-10-17 09:16:25.652845+00:00, filter=5-12%
+2025-10-06 13:59:26 | INFO | bot | [DB] USERS_CACHE заполнен: 3 записей
+2025-10-06 13:59:26 | INFO | bot | [/start] USERS_CACHE после запуска команды: 3 записей.
+2025-10-06 13:59:26 | INFO | bot | [/start] sample -> 496805427: {'subscription': 1, 'trial_end': datetime.datetime(2025, 9, 7, 10, 26, 39, 942042, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-06 13:59:26 | INFO | bot | [/start] sample -> 940868721: {'subscription': 1, 'trial_end': datetime.datetime(2025, 10, 18, 12, 53, 23, 521462, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-06 13:59:26 | INFO | bot | [/start] sample -> 1879112903: {'subscription': 1, 'trial_end': datetime.datetime(2025, 10, 17, 9, 16, 25, 652845, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-06 13:59:29 | WARNING | bot | [DEBUG MESSAGE FLOW] user_id=1879112903, text='👤 Профиль', repr='👤 Профиль'
+2025-10-06 13:59:31 | WARNING | bot | [DEBUG MESSAGE FLOW] user_id=1879112903, text='💳 Оплатить', repr='💳 Оплатить'
+2025-10-06 13:59:32 | WARNING | bot | [DEBUG MESSAGE FLOW] user_id=1879112903, text='✅ Я оплатил', repr='✅ Я оплатил'
+2025-10-06 13:59:36 | WARNING | bot | [DEBUG MESSAGE FLOW] user_id=1879112903, text='/approve 1879112903', repr='/approve 1879112903'
+2025-10-06 13:59:36 | INFO | bot | [DB:update_user] user_id=1879112903 incoming kwargs={'subscription': 1, 'trial_end': datetime.datetime(2025, 11, 5, 10, 59, 36, 892438, tzinfo=datetime.timezone.utc)}
+2025-10-06 13:59:36 | INFO | bot | [DB:update_user] user_id=1879112903 after update filter_value='5-12%' kwargs={'subscription': 1, 'trial_end': datetime.datetime(2025, 11, 5, 10, 59, 36, 892438, tzinfo=datetime.timezone.utc)}
+2025-10-06 13:59:41 | WARNING | bot | [DEBUG MESSAGE FLOW] user_id=1879112903, text='🔍 Проверить монету', repr='🔍 Проверить монету'
+2025-10-06 13:59:43 | WARNING | bot | [DEBUG MESSAGE FLOW] user_id=1879112903, text='btc', repr='btc'
+2025-10-06 13:59:50 | WARNING | bot | [DEBUG MESSAGE FLOW] user_id=1879112903, text='ℹ️ О боте', repr='ℹ️ О боте'
+2025-10-06 13:59:52 | WARNING | bot | [DEBUG MESSAGE FLOW] user_id=1879112903, text='⚙️ Фильтры', repr='⚙️ Фильтры'
+2025-10-06 13:59:54 | WARNING | bot | [DEBUG MESSAGE FLOW] user_id=1879112903, text='12-19%', repr='12-19%'
+2025-10-06 13:59:54 | INFO | bot | [ФИЛЬТР DEBUG] user_id=1879112903 выбрал фильтр 12-19%
+2025-10-06 13:59:54 | INFO | bot | [DB:update_user] user_id=1879112903 incoming kwargs={'filter': '12-19%'}
+2025-10-06 13:59:54 | INFO | bot | [DB:update_user] user_id=1879112903 after update filter_value='12-19%' kwargs={'filter_value': '12-19%'}
+2025-10-06 13:59:54 | INFO | bot | [DB] get_all_users_full вернул: 3 строк
+2025-10-06 13:59:54 | INFO | bot | [DB] user_id=496805427, subscription=1, trial_end_raw=2025-09-07 10:26:39.942042, trial_end_parsed=2025-09-07 10:26:39.942042+00:00, filter=5-12%
+2025-10-06 13:59:54 | INFO | bot | [DB] user_id=940868721, subscription=1, trial_end_raw=2025-10-18 12:53:23.521462, trial_end_parsed=2025-10-18 12:53:23.521462+00:00, filter=5-12%
+2025-10-06 13:59:54 | INFO | bot | [DB] user_id=1879112903, subscription=1, trial_end_raw=2025-11-05 10:59:36.892438, trial_end_parsed=2025-11-05 10:59:36.892438+00:00, filter=12-19%
+2025-10-06 13:59:54 | INFO | bot | [DB] USERS_CACHE заполнен: 3 записей
+2025-10-06 13:59:54 | INFO | bot | [ФИЛЬТР DEBUG] USERS_CACHE[1879112903] -> {'subscription': 1, 'trial_end': datetime.datetime(2025, 11, 5, 10, 59, 36, 892438, tzinfo=datetime.timezone.utc), 'filter': '12-19%', 'notify': 1}
+2025-10-06 14:00:03 | INFO | bot | START _check_and_alert
+2025-10-06 14:00:06 | INFO | bot | Загружено сырых данных: 5837 монет c 6 источников; детали: {'mexc_spot': 2217, 'mexc_fut': 824, 'bitget_fut': 581, 'gate_fut': 614, 'binance_fut': 550, 'bingx_spot': 1051}
+2025-10-06 14:00:06 | INFO | bot | После нормализации: 2569 монет
+2025-10-06 14:00:06 | INFO | bot | После фильтрации (подходящие пары рынков): 798 монет
+2025-10-06 14:00:06 | INFO | bot | USERS_CACHE size: 3
+2025-10-06 14:00:06 | INFO | bot | USERS_CACHE sample -> 496805427: {'subscription': 1, 'trial_end': datetime.datetime(2025, 9, 7, 10, 26, 39, 942042, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-06 14:00:06 | INFO | bot | USERS_CACHE sample -> 940868721: {'subscription': 1, 'trial_end': datetime.datetime(2025, 10, 18, 12, 53, 23, 521462, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-06 14:00:06 | INFO | bot | USERS_CACHE sample -> 1879112903: {'subscription': 1, 'trial_end': datetime.datetime(2025, 11, 5, 10, 59, 36, 892438, tzinfo=datetime.timezone.utc), 'filter': '12-19%', 'notify': 1}
+2025-10-06 14:00:08 | INFO | bot | [mexc_status] MATCH SYND -> deposit=False, withdraw=False
+2025-10-06 14:00:08 | INFO | bot | [SYND] user 496805427 — отправлено сообщение с 1 спредами
+2025-10-06 14:00:08 | INFO | bot | [SYND] user 940868721 — отправлено сообщение с 1 спредами
+2025-10-06 14:00:10 | INFO | bot | [mexc_status] MATCH BAGWORK -> deposit=False, withdraw=False
+2025-10-06 14:00:11 | INFO | bot | [BAGWORK] user 496805427 — отправлено сообщение с 1 спредами
+2025-10-06 14:00:11 | INFO | bot | [BAGWORK] user 940868721 — отправлено сообщение с 1 спредами
+2025-10-06 14:00:14 | INFO | bot | [MORE] user 496805427 — отправлено сообщение с 1 спредами
+2025-10-06 14:00:14 | INFO | bot | [MORE] user 940868721 — отправлено сообщение с 1 спредами
+2025-10-06 14:00:16 | INFO | bot | [mexc_status] MATCH A8 -> deposit=False, withdraw=False
+2025-10-06 14:00:19 | INFO | bot | [A8] user 496805427 — отправлено сообщение с 2 спредами
+2025-10-06 14:00:19 | INFO | bot | [A8] user 940868721 — отправлено сообщение с 2 спредами
+2025-10-06 14:00:21 | INFO | bot | [mexc_status] MATCH TUT -> deposit=False, withdraw=False
+2025-10-06 14:00:26 | INFO | bot | [binance_status] TUT -> deposit=True, withdraw=True
+2025-10-06 14:00:26 | INFO | bot | [TUT] user 1879112903 — отправлено сообщение с 4 спредами
+2025-10-06 14:00:29 | INFO | bot | [mexc_status] MATCH RION -> deposit=False, withdraw=False
+2025-10-06 14:00:29 | INFO | bot | [RION] user 1879112903 — отправлено сообщение с 1 спредами
+2025-10-06 14:00:32 | INFO | bot | [M] user 496805427 — отправлено сообщение с 1 спредами
+2025-10-06 14:00:32 | INFO | bot | [M] user 940868721 — отправлено сообщение с 1 спредами
+2025-10-06 14:00:34 | INFO | bot | [mexc_status] MATCH BDXN -> deposit=False, withdraw=False
+2025-10-06 14:00:38 | WARNING | bot | [binance_status] No match for BDXN
+2025-10-06 14:00:38 | INFO | bot | [BDXN] user 496805427 — отправлено сообщение с 3 спредами
+2025-10-06 14:00:38 | INFO | bot | [BDXN] user 940868721 — отправлено сообщение с 3 спредами
+2025-10-06 14:00:41 | INFO | bot | [mexc_status] MATCH LEVER -> deposit=False, withdraw=False
+2025-10-06 14:00:44 | INFO | bot | [LEVER] user 496805427 — отправлено сообщение с 1 спредами
+2025-10-06 14:00:44 | INFO | bot | [LEVER] user 940868721 — отправлено сообщение с 1 спредами
+2025-10-06 14:00:46 | INFO | bot | [mexc_status] MATCH CLIPPY -> deposit=False, withdraw=False
+2025-10-06 14:00:47 | INFO | bot | [CLIPPY] user 1879112903 — отправлено сообщение с 1 спредами
+2025-10-06 14:00:49 | WARNING | bot | [mexc_status] NO MATCH for ALL, sample=[{'coin': 'CATCHOLD', 'name': 'SpaceCatch', 'networkList': [{'coin': 'CATCHOLD', 'depositDesc': 'Deposit is prohibited (forced deposit may result in asset loss)', 'depositEnable': False, 'minConfirm': 100, 'name': 'SpaceCatch', 'network': 'Arbitrum One(ARB)', 'withdrawEnable': True, 'withdrawFee': '0', 'withdrawIntegerMultiple': None, 'withdrawMax': '100000', 'withdrawMin': '1', 'sameAddress': False, 'contract': '0xf0a479C9c3378638EC603b8B6B0d75903902550B', 'withdrawTips': None, 'depositTips': None, 'netWork': 'ARB'}]}, {'coin': 'STPT', 'name': 'STP', 'networkList': [{'coin': 'STPT', 'depositDesc': 'Deposit suspended as project upgrade is in progress', 'depositEnable': False, 'minConfirm': 96, 'name': 'STP', 'network': 'NONE', 'withdrawEnable': False, 'withdrawFee': '0', 'withdrawIntegerMultiple': None, 'withdrawMax': '800000000', 'withdrawMin': '800000000', 'sameAddress': False, 'contract': '0xDe7D85157d9714EADf595045CC12Ca4A5f3E2aDb', 'withdrawTips': None, 'depositTips': None, 'netWork': 'NONE'}]}, {'coin': 'BBC', 'name': 'ByByeCar', 'networkList': [{'coin': 'BBC', 'depositDesc': 'Deposit is prohibited (forced deposit may result in asset loss)', 'depositEnable': False, 'minConfirm': 20, 'name': 'ByByeCar', 'network': 'Tron(TRC20)', 'withdrawEnable': True, 'withdrawFee': '0', 'withdrawIntegerMultiple': None, 'withdrawMax': '200000', 'withdrawMin': '1', 'sameAddress': False, 'contract': 'TRrkeSxEypfiTn7gU3Gg3tP756cEhK493b', 'withdrawTips': '', 'depositTips': '', 'netWork': 'TRX'}]}]
+2025-10-06 14:00:53 | WARNING | bot | [binance_status] No match for ALL
+2025-10-06 14:00:53 | INFO | bot | [ALL] user 496805427 — отправлено сообщение с 2 спредами
+2025-10-06 14:00:53 | INFO | bot | [ALL] user 940868721 — отправлено сообщение с 2 спредами
+2025-10-06 14:00:54 | INFO | bot | END _check_and_alert | пар проверено: 7298, уведомлений поставлено в очередь: 19, время: 51.06 сек.
+2025-10-06 14:01:03 | INFO | bot | START _check_and_alert
+2025-10-06 14:01:06 | INFO | bot | Загружено сырых данных: 5837 монет c 6 источников; детали: {'mexc_spot': 2217, 'mexc_fut': 824, 'bitget_fut': 581, 'gate_fut': 614, 'binance_fut': 550, 'bingx_spot': 1051}
+2025-10-06 14:01:06 | INFO | bot | После нормализации: 2569 монет
+2025-10-06 14:01:06 | INFO | bot | После фильтрации (подходящие пары рынков): 798 монет
+2025-10-06 14:01:06 | INFO | bot | USERS_CACHE size: 3
+2025-10-06 14:01:06 | INFO | bot | USERS_CACHE sample -> 496805427: {'subscription': 1, 'trial_end': datetime.datetime(2025, 9, 7, 10, 26, 39, 942042, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1, 'collected_spreads': {}}
+2025-10-06 14:01:06 | INFO | bot | USERS_CACHE sample -> 940868721: {'subscription': 1, 'trial_end': datetime.datetime(2025, 10, 18, 12, 53, 23, 521462, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1, 'collected_spreads': {}}
+2025-10-06 14:01:06 | INFO | bot | USERS_CACHE sample -> 1879112903: {'subscription': 1, 'trial_end': datetime.datetime(2025, 11, 5, 10, 59, 36, 892438, tzinfo=datetime.timezone.utc), 'filter': '12-19%', 'notify': 1, 'collected_spreads': {}}
+2025-10-06 14:01:06 | INFO | bot | Top spreads (top 20) — возможно причины неполучения уведомлений:
+2025-10-06 14:01:06 | INFO | bot | REN mexc_spot vs bitget_fut: 199.18% — 0.007241 / 3.539000
+2025-10-06 14:01:06 | INFO | bot | REN mexc_spot vs gate_fut: 199.18% — 0.007241 / 3.535000
+2025-10-06 14:01:06 | INFO | bot | REN mexc_spot vs mexc_fut: 199.18% — 0.007241 / 3.533000
+2025-10-06 14:01:06 | INFO | bot | REN mexc_spot vs binance_fut: 199.18% — 0.007241 / 3.533000
+2025-10-06 14:01:06 | INFO | bot | TRUMP bitget_fut vs bingx_spot: 193.52% — 7.827000 / 0.128900
+2025-10-06 14:01:06 | INFO | bot | TRUMP gate_fut vs bingx_spot: 193.52% — 7.824000 / 0.128900
+2025-10-06 14:01:06 | INFO | bot | TRUMP mexc_fut vs bingx_spot: 193.52% — 7.823000 / 0.128900
+2025-10-06 14:01:06 | INFO | bot | TRUMP binance_fut vs bingx_spot: 193.52% — 7.823000 / 0.128900
+2025-10-06 14:01:06 | INFO | bot | LIGHT bitget_fut vs bingx_spot: 192.17% — 0.851300 / 0.017000
+2025-10-06 14:01:06 | INFO | bot | LIGHT binance_fut vs bingx_spot: 192.17% — 0.851300 / 0.017000
+2025-10-06 14:01:06 | INFO | bot | LIGHT gate_fut vs bingx_spot: 192.17% — 0.851000 / 0.017000
+2025-10-06 14:01:06 | INFO | bot | LIGHT mexc_fut vs bingx_spot: 192.16% — 0.850400 / 0.017000
+2025-10-06 14:01:06 | INFO | bot | VELO gate_fut vs bingx_spot: 114.94% — 0.046820 / 0.012645
+2025-10-06 14:01:06 | INFO | bot | VELO bitget_fut vs bingx_spot: 114.81% — 0.046726 / 0.012645
+2025-10-06 14:01:06 | INFO | bot | VELO mexc_fut vs bingx_spot: 114.77% — 0.046700 / 0.012645
+2025-10-06 14:01:06 | INFO | bot | VELO binance_fut vs bingx_spot: 114.77% — 0.046700 / 0.012645
+2025-10-06 14:01:06 | INFO | bot | VELO mexc_spot vs gate_fut: 114.30% — 0.012766 / 0.046820
+2025-10-06 14:01:06 | INFO | bot | VELO mexc_spot vs bitget_fut: 114.17% — 0.012766 / 0.046726
+2025-10-06 14:01:06 | INFO | bot | VELO mexc_spot vs mexc_fut: 114.13% — 0.012766 / 0.046700
+2025-10-06 14:01:06 | INFO | bot | VELO mexc_spot vs binance_fut: 114.13% — 0.012766 / 0.046700
+2025-10-06 14:01:06 | INFO | bot | Максимальный спред в проходе: 199.18%
+2025-10-06 14:01:06 | INFO | bot | END _check_and_alert | пар проверено: 7298, уведомлений поставлено в очередь: 0, время: 3.44 сек.
+2025-10-06 14:01:08 | WARNING | bot | [DEBUG MESSAGE FLOW] user_id=1879112903, text='⚙️ Фильтры', repr='⚙️ Фильтры'
+2025-10-06 14:01:09 | WARNING | bot | [DEBUG MESSAGE FLOW] user_id=1879112903, text='5-12%', repr='5-12%'
+2025-10-06 14:01:09 | INFO | bot | [ФИЛЬТР DEBUG] user_id=1879112903 выбрал фильтр 5-12%
+2025-10-06 14:01:09 | INFO | bot | [DB:update_user] user_id=1879112903 incoming kwargs={'filter': '5-12%'}
+2025-10-06 14:01:09 | INFO | bot | [DB:update_user] user_id=1879112903 after update filter_value='5-12%' kwargs={'filter_value': '5-12%'}
+2025-10-06 14:01:09 | INFO | bot | [DB] get_all_users_full вернул: 3 строк
+2025-10-06 14:01:09 | INFO | bot | [DB] user_id=496805427, subscription=1, trial_end_raw=2025-09-07 10:26:39.942042, trial_end_parsed=2025-09-07 10:26:39.942042+00:00, filter=5-12%
+2025-10-06 14:01:09 | INFO | bot | [DB] user_id=940868721, subscription=1, trial_end_raw=2025-10-18 12:53:23.521462, trial_end_parsed=2025-10-18 12:53:23.521462+00:00, filter=5-12%
+2025-10-06 14:01:09 | INFO | bot | [DB] user_id=1879112903, subscription=1, trial_end_raw=2025-11-05 10:59:36.892438, trial_end_parsed=2025-11-05 10:59:36.892438+00:00, filter=5-12%
+2025-10-06 14:01:09 | INFO | bot | [DB] USERS_CACHE заполнен: 3 записей
+2025-10-06 14:01:09 | INFO | bot | [ФИЛЬТР DEBUG] USERS_CACHE[1879112903] -> {'subscription': 1, 'trial_end': datetime.datetime(2025, 11, 5, 10, 59, 36, 892438, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-06 14:01:17 | ERROR | TeleBot | Infinity polling: polling exited
+2025-10-06 14:01:17 | ERROR | TeleBot | Break infinity polling
+2025-10-06 18:07:31 | INFO | bot | Использую базу: C:\Users\90533\PC\Desktop\сспред\bot.db
+2025-10-06 18:07:31 | INFO | bot | [DB] get_all_users_full вернул: 3 строк
+2025-10-06 18:07:31 | INFO | bot | [DB] user_id=496805427, subscription=1, trial_end_raw=2025-09-07 10:26:39.942042, trial_end_parsed=2025-09-07 10:26:39.942042+00:00, filter=5-12%
+2025-10-06 18:07:31 | INFO | bot | [DB] user_id=940868721, subscription=1, trial_end_raw=2025-10-18 12:53:23.521462, trial_end_parsed=2025-10-18 12:53:23.521462+00:00, filter=5-12%
+2025-10-06 18:07:31 | INFO | bot | [DB] user_id=1879112903, subscription=1, trial_end_raw=2025-11-05 10:59:36.892438, trial_end_parsed=2025-11-05 10:59:36.892438+00:00, filter=5-12%
+2025-10-06 18:07:31 | INFO | bot | [DB] USERS_CACHE заполнен: 3 записей
+2025-10-06 18:07:31 | INFO | bot | [main] USERS_CACHE загружен: 3 записей.
+2025-10-06 18:07:31 | INFO | bot | [main] sample -> 496805427: {'subscription': 1, 'trial_end': datetime.datetime(2025, 9, 7, 10, 26, 39, 942042, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-06 18:07:31 | INFO | bot | [main] sample -> 940868721: {'subscription': 1, 'trial_end': datetime.datetime(2025, 10, 18, 12, 53, 23, 521462, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-06 18:07:31 | INFO | bot | [main] sample -> 1879112903: {'subscription': 1, 'trial_end': datetime.datetime(2025, 11, 5, 10, 59, 36, 892438, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-06 18:07:31 | INFO | bot | [DB:update_user] user_id=1879112903 incoming kwargs={'subscription': 1}
+2025-10-06 18:07:31 | INFO | bot | [DB:update_user] user_id=1879112903 after update filter_value='5-12%' kwargs={'subscription': 1}
+2025-10-06 18:07:31 | INFO | bot | [DB:update_user] user_id=496805427 incoming kwargs={'subscription': 1}
+2025-10-06 18:07:31 | INFO | bot | [DB:update_user] user_id=496805427 after update filter_value='5-12%' kwargs={'subscription': 1}
+2025-10-06 18:07:31 | INFO | bot | [DB:update_user] user_id=940868721 incoming kwargs={'subscription': 1}
+2025-10-06 18:07:31 | INFO | bot | [DB:update_user] user_id=940868721 after update filter_value='5-12%' kwargs={'subscription': 1}
+2025-10-06 18:07:31 | INFO | bot | [maintenance] background tasks started
+2025-10-06 18:07:31 | INFO | bot | 🤖 Бот запущен.
+2025-10-06 18:07:31 | INFO | bot | [maintenance] daily_backup_task sleeping 31948.5s until 2025-10-07T00:00:00+00:00
+2025-10-06 18:07:31 | INFO | bot | [maintenance] daily_summary_task sleeping 35548.5s until 2025-10-07T01:00:00+00:00
+2025-10-06 18:07:31 | INFO | bot | [DB] get_all_users_full вернул: 3 строк
+2025-10-06 18:07:31 | INFO | bot | [DB] user_id=496805427, subscription=1, trial_end_raw=2025-09-07 10:26:39.942042, trial_end_parsed=2025-09-07 10:26:39.942042+00:00, filter=5-12%
+2025-10-06 18:07:31 | INFO | bot | [DB] user_id=940868721, subscription=1, trial_end_raw=2025-10-18 12:53:23.521462, trial_end_parsed=2025-10-18 12:53:23.521462+00:00, filter=5-12%
+2025-10-06 18:07:31 | INFO | bot | [DB] user_id=1879112903, subscription=1, trial_end_raw=2025-11-05 10:59:36.892438, trial_end_parsed=2025-11-05 10:59:36.892438+00:00, filter=5-12%
+2025-10-06 18:07:31 | INFO | bot | [DB] USERS_CACHE заполнен: 3 записей
+2025-10-06 18:08:31 | INFO | bot | START _check_and_alert
+2025-10-06 18:08:34 | INFO | bot | Загружено сырых данных: 5836 монет c 6 источников; детали: {'mexc_spot': 2217, 'mexc_fut': 824, 'bitget_fut': 581, 'gate_fut': 613, 'binance_fut': 550, 'bingx_spot': 1051}
+2025-10-06 18:08:34 | INFO | bot | После нормализации: 2569 монет
+2025-10-06 18:08:34 | INFO | bot | После фильтрации (подходящие пары рынков): 797 монет
+2025-10-06 18:08:34 | INFO | bot | USERS_CACHE size: 3
+2025-10-06 18:08:34 | INFO | bot | USERS_CACHE sample -> 496805427: {'subscription': 1, 'trial_end': datetime.datetime(2025, 9, 7, 10, 26, 39, 942042, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-06 18:08:34 | INFO | bot | USERS_CACHE sample -> 940868721: {'subscription': 1, 'trial_end': datetime.datetime(2025, 10, 18, 12, 53, 23, 521462, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-06 18:08:34 | INFO | bot | USERS_CACHE sample -> 1879112903: {'subscription': 1, 'trial_end': datetime.datetime(2025, 11, 5, 10, 59, 36, 892438, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-06 18:08:36 | INFO | bot | [mexc_status] MATCH SYND -> deposit=False, withdraw=False
+2025-10-06 18:08:36 | INFO | bot | [SYND] user 496805427 — отправлено сообщение с 1 спредами
+2025-10-06 18:08:36 | INFO | bot | [SYND] user 940868721 — отправлено сообщение с 1 спредами
+2025-10-06 18:08:36 | INFO | bot | [SYND] user 1879112903 — отправлено сообщение с 1 спредами
+2025-10-06 18:08:39 | INFO | bot | [mexc_status] MATCH BAGWORK -> deposit=False, withdraw=False
+2025-10-06 18:08:39 | INFO | bot | [BAGWORK] user 496805427 — отправлено сообщение с 1 спредами
+2025-10-06 18:08:39 | INFO | bot | [BAGWORK] user 940868721 — отправлено сообщение с 1 спредами
+2025-10-06 18:08:39 | INFO | bot | [BAGWORK] user 1879112903 — отправлено сообщение с 1 спредами
+2025-10-06 18:08:42 | INFO | bot | [MORE] user 496805427 — отправлено сообщение с 1 спредами
+2025-10-06 18:08:42 | INFO | bot | [MORE] user 940868721 — отправлено сообщение с 1 спредами
+2025-10-06 18:08:42 | INFO | bot | [MORE] user 1879112903 — отправлено сообщение с 1 спредами
+2025-10-06 18:08:45 | INFO | bot | [BAS] user 496805427 — отправлено сообщение с 1 спредами
+2025-10-06 18:08:45 | INFO | bot | [BAS] user 940868721 — отправлено сообщение с 1 спредами
+2025-10-06 18:08:45 | INFO | bot | [BAS] user 1879112903 — отправлено сообщение с 1 спредами
+2025-10-06 18:08:47 | INFO | bot | [mexc_status] MATCH BDXN -> deposit=False, withdraw=False
+2025-10-06 18:08:51 | WARNING | bot | [binance_status] NO MATCH for BDXN, sample=[{'coin': 'AGLD', 'depositAllEnable': True, 'withdrawAllEnable': True, 'name': 'Adventure Gold', 'free': '0', 'locked': '0', 'freeze': '0', 'withdrawing': '0', 'ipoing': '0', 'ipoable': '0', 'storage': '0', 'isLegalMoney': False, 'trading': True, 'networkList': [{'network': 'ETH', 'coin': 'AGLD', 'withdrawIntegerMultiple': '0.00000001', 'isDefault': True, 'depositEnable': True, 'withdrawEnable': True, 'depositDesc': '', 'withdrawDesc': '', 'specialTips': '', 'specialWithdrawTips': '', 'name': 'Ethereum (ERC20)', 'resetAddressStatus': False, 'addressRegex': '^(0x)[0-9A-Fa-f]{40}$', 'memoRegex': '', 'withdrawFee': '3.21', 'withdrawMin': '6.42', 'withdrawMax': '6973501', 'withdrawInternalMin': '0.00000001', 'depositDust': '0.0012', 'minConfirm': 6, 'unLockConfirm': 64, 'sameAddress': False, 'withdrawTag': False, 'estimatedArrivalTime': 2, 'busy': False, 'contractAddressUrl': 'https://etherscan.io/address/', 'contractAddress': '0x32353a6c91143bfd6c7d363b546e62a9a2489a20'}]}, {'coin': 'STPT', 'depositAllEnable': False, 'withdrawAllEnable': False, 'name': 'Standard Tokenization Protocol', 'free': '0', 'locked': '0', 'freeze': '0', 'withdrawing': '0', 'ipoing': '0', 'ipoable': '0', 'storage': '0', 'isLegalMoney': False, 'trading': False, 'networkList': [{'network': 'ETH', 'coin': 'STPT', 'withdrawIntegerMultiple': '0.00000001', 'isDefault': True, 'depositEnable': False, 'withdrawEnable': False, 'depositDesc': 'Deposit for this token is not supported, please try other networks.', 'withdrawDesc': 'Withdrawal for this token is not supported, please try other networks.', 'specialTips': '', 'name': 'Ethereum (ERC20)', 'resetAddressStatus': False, 'addressRegex': '^(0x)[0-9A-Fa-f]{40}$', 'memoRegex': '', 'withdrawFee': '0', 'withdrawMin': '10', 'withdrawMax': '10000000000', 'withdrawInternalMin': '0.00000001', 'depositDust': '0.023', 'minConfirm': 6, 'unLockConfirm': 64, 'sameAddress': False, 'withdrawTag': False, 'estimatedArrivalTime': 2, 'busy': False, 'contractAddressUrl': 'https://etherscan.io/address/', 'contractAddress': '0xde7d85157d9714eadf595045cc12ca4a5f3e2adb'}]}, {'coin': 'SCR', 'depositAllEnable': True, 'withdrawAllEnable': True, 'name': 'Scroll', 'free': '0', 'locked': '0', 'freeze': '0', 'withdrawing': '0', 'ipoing': '0', 'ipoable': '0', 'storage': '0', 'isLegalMoney': False, 'trading': True, 'networkList': [{'network': 'SCROLL', 'coin': 'SCR', 'withdrawIntegerMultiple': '0.00000001', 'isDefault': True, 'depositEnable': True, 'withdrawEnable': True, 'depositDesc': '', 'withdrawDesc': '', 'specialTips': 'SCROLL is a L2 network. After crediting, its corresponding L1 transaction needs to be confirmed before unlocking, which takes approximately 1-2 hours.', 'specialWithdrawTips': '', 'name': 'Scroll', 'resetAddressStatus': False, 'addressRegex': '^(0x)[0-9A-Fa-f]{40}$', 'memoRegex': '', 'withdrawFee': '0.2', 'withdrawMin': '4', 'withdrawMax': '16556291', 'withdrawInternalMin': '0', 'depositDust': '0.00000001', 'minConfirm': 1, 'unLockConfirm': 0, 'sameAddress': False, 'withdrawTag': False, 'estimatedArrivalTime': 1, 'busy': False, 'contractAddressUrl': 'https://scrollscan.com/token/', 'contractAddress': '0xd29687c813d741e2f938f4ac377128810e217b1b'}]}]
+2025-10-06 18:08:51 | INFO | bot | [BDXN] user 496805427 — отправлено сообщение с 3 спредами
+2025-10-06 18:08:51 | INFO | bot | [BDXN] user 940868721 — отправлено сообщение с 3 спредами
+2025-10-06 18:08:51 | INFO | bot | [BDXN] user 1879112903 — отправлено сообщение с 3 спредами
+2025-10-06 18:09:01 | WARNING | bot | get_mexc_status failed for RIVER: 
+2025-10-06 18:09:01 | INFO | bot | [RIVER] user 496805427 — отправлено сообщение с 1 спредами
+2025-10-06 18:09:04 | INFO | bot | [mexc_status] MATCH RIVER -> deposit=False, withdraw=False
+2025-10-06 18:09:04 | INFO | bot | [RIVER] user 940868721 — отправлено сообщение с 1 спредами
+2025-10-06 18:09:04 | INFO | bot | [RIVER] user 1879112903 — отправлено сообщение с 1 спредами
+2025-10-06 18:09:08 | INFO | bot | [LYN] user 496805427 — отправлено сообщение с 1 спредами
+2025-10-06 18:09:08 | INFO | bot | [LYN] user 940868721 — отправлено сообщение с 1 спредами
+2025-10-06 18:09:08 | INFO | bot | [LYN] user 1879112903 — отправлено сообщение с 1 спредами
+2025-10-06 18:09:09 | INFO | bot | [mexc_status] MATCH EPT -> deposit=False, withdraw=False
+2025-10-06 18:09:14 | WARNING | bot | [binance_status] NO MATCH for EPT, sample=[{'coin': 'AGLD', 'depositAllEnable': True, 'withdrawAllEnable': True, 'name': 'Adventure Gold', 'free': '0', 'locked': '0', 'freeze': '0', 'withdrawing': '0', 'ipoing': '0', 'ipoable': '0', 'storage': '0', 'isLegalMoney': False, 'trading': True, 'networkList': [{'network': 'ETH', 'coin': 'AGLD', 'withdrawIntegerMultiple': '0.00000001', 'isDefault': True, 'depositEnable': True, 'withdrawEnable': True, 'depositDesc': '', 'withdrawDesc': '', 'specialTips': '', 'specialWithdrawTips': '', 'name': 'Ethereum (ERC20)', 'resetAddressStatus': False, 'addressRegex': '^(0x)[0-9A-Fa-f]{40}$', 'memoRegex': '', 'withdrawFee': '3.21', 'withdrawMin': '6.42', 'withdrawMax': '6973501', 'withdrawInternalMin': '0.00000001', 'depositDust': '0.0012', 'minConfirm': 6, 'unLockConfirm': 64, 'sameAddress': False, 'withdrawTag': False, 'estimatedArrivalTime': 2, 'busy': False, 'contractAddressUrl': 'https://etherscan.io/address/', 'contractAddress': '0x32353a6c91143bfd6c7d363b546e62a9a2489a20'}]}, {'coin': 'STPT', 'depositAllEnable': False, 'withdrawAllEnable': False, 'name': 'Standard Tokenization Protocol', 'free': '0', 'locked': '0', 'freeze': '0', 'withdrawing': '0', 'ipoing': '0', 'ipoable': '0', 'storage': '0', 'isLegalMoney': False, 'trading': False, 'networkList': [{'network': 'ETH', 'coin': 'STPT', 'withdrawIntegerMultiple': '0.00000001', 'isDefault': True, 'depositEnable': False, 'withdrawEnable': False, 'depositDesc': 'Deposit for this token is not supported, please try other networks.', 'withdrawDesc': 'Withdrawal for this token is not supported, please try other networks.', 'specialTips': '', 'name': 'Ethereum (ERC20)', 'resetAddressStatus': False, 'addressRegex': '^(0x)[0-9A-Fa-f]{40}$', 'memoRegex': '', 'withdrawFee': '0', 'withdrawMin': '10', 'withdrawMax': '10000000000', 'withdrawInternalMin': '0.00000001', 'depositDust': '0.023', 'minConfirm': 6, 'unLockConfirm': 64, 'sameAddress': False, 'withdrawTag': False, 'estimatedArrivalTime': 2, 'busy': False, 'contractAddressUrl': 'https://etherscan.io/address/', 'contractAddress': '0xde7d85157d9714eadf595045cc12ca4a5f3e2adb'}]}, {'coin': 'SCR', 'depositAllEnable': True, 'withdrawAllEnable': True, 'name': 'Scroll', 'free': '0', 'locked': '0', 'freeze': '0', 'withdrawing': '0', 'ipoing': '0', 'ipoable': '0', 'storage': '0', 'isLegalMoney': False, 'trading': True, 'networkList': [{'network': 'SCROLL', 'coin': 'SCR', 'withdrawIntegerMultiple': '0.00000001', 'isDefault': True, 'depositEnable': True, 'withdrawEnable': True, 'depositDesc': '', 'withdrawDesc': '', 'specialTips': 'SCROLL is a L2 network. After crediting, its corresponding L1 transaction needs to be confirmed before unlocking, which takes approximately 1-2 hours.', 'specialWithdrawTips': '', 'name': 'Scroll', 'resetAddressStatus': False, 'addressRegex': '^(0x)[0-9A-Fa-f]{40}$', 'memoRegex': '', 'withdrawFee': '0.2', 'withdrawMin': '4', 'withdrawMax': '16556291', 'withdrawInternalMin': '0', 'depositDust': '0.00000001', 'minConfirm': 1, 'unLockConfirm': 0, 'sameAddress': False, 'withdrawTag': False, 'estimatedArrivalTime': 1, 'busy': False, 'contractAddressUrl': 'https://scrollscan.com/token/', 'contractAddress': '0xd29687c813d741e2f938f4ac377128810e217b1b'}]}]
+2025-10-06 18:09:14 | INFO | bot | [EPT] user 496805427 — отправлено сообщение с 4 спредами
+2025-10-06 18:09:14 | INFO | bot | [EPT] user 940868721 — отправлено сообщение с 4 спредами
+2025-10-06 18:09:14 | INFO | bot | [EPT] user 1879112903 — отправлено сообщение с 4 спредами
+2025-10-06 18:09:16 | INFO | bot | [mexc_status] MATCH J -> deposit=False, withdraw=False
+2025-10-06 18:09:19 | INFO | bot | [J] user 496805427 — отправлено сообщение с 3 спредами
+2025-10-06 18:09:19 | INFO | bot | [J] user 940868721 — отправлено сообщение с 3 спредами
+2025-10-06 18:09:19 | INFO | bot | [J] user 1879112903 — отправлено сообщение с 3 спредами
+2025-10-06 18:09:21 | WARNING | bot | [mexc_status] NO MATCH for ALL, sample=[{'coin': 'CATCHOLD', 'name': 'SpaceCatch', 'networkList': [{'coin': 'CATCHOLD', 'depositDesc': 'Deposit is prohibited (forced deposit may result in asset loss)', 'depositEnable': False, 'minConfirm': 100, 'name': 'SpaceCatch', 'network': 'Arbitrum One(ARB)', 'withdrawEnable': True, 'withdrawFee': '0', 'withdrawIntegerMultiple': None, 'withdrawMax': '100000', 'withdrawMin': '1', 'sameAddress': False, 'contract': '0xf0a479C9c3378638EC603b8B6B0d75903902550B', 'withdrawTips': None, 'depositTips': None, 'netWork': 'ARB'}]}, {'coin': 'STPT', 'name': 'STP', 'networkList': [{'coin': 'STPT', 'depositDesc': 'Deposit suspended as project upgrade is in progress', 'depositEnable': False, 'minConfirm': 96, 'name': 'STP', 'network': 'NONE', 'withdrawEnable': False, 'withdrawFee': '0', 'withdrawIntegerMultiple': None, 'withdrawMax': '800000000', 'withdrawMin': '800000000', 'sameAddress': False, 'contract': '0xDe7D85157d9714EADf595045CC12Ca4A5f3E2aDb', 'withdrawTips': None, 'depositTips': None, 'netWork': 'NONE'}]}, {'coin': 'BBC', 'name': 'ByByeCar', 'networkList': [{'coin': 'BBC', 'depositDesc': 'Deposit is prohibited (forced deposit may result in asset loss)', 'depositEnable': False, 'minConfirm': 20, 'name': 'ByByeCar', 'network': 'Tron(TRC20)', 'withdrawEnable': True, 'withdrawFee': '0', 'withdrawIntegerMultiple': None, 'withdrawMax': '200000', 'withdrawMin': '1', 'sameAddress': False, 'contract': 'TRrkeSxEypfiTn7gU3Gg3tP756cEhK493b', 'withdrawTips': '', 'depositTips': '', 'netWork': 'TRX'}]}]
+2025-10-06 18:09:25 | WARNING | bot | [binance_status] NO MATCH for ALL, sample=[{'coin': 'AGLD', 'depositAllEnable': True, 'withdrawAllEnable': True, 'name': 'Adventure Gold', 'free': '0', 'locked': '0', 'freeze': '0', 'withdrawing': '0', 'ipoing': '0', 'ipoable': '0', 'storage': '0', 'isLegalMoney': False, 'trading': True, 'networkList': [{'network': 'ETH', 'coin': 'AGLD', 'withdrawIntegerMultiple': '0.00000001', 'isDefault': True, 'depositEnable': True, 'withdrawEnable': True, 'depositDesc': '', 'withdrawDesc': '', 'specialTips': '', 'specialWithdrawTips': '', 'name': 'Ethereum (ERC20)', 'resetAddressStatus': False, 'addressRegex': '^(0x)[0-9A-Fa-f]{40}$', 'memoRegex': '', 'withdrawFee': '3.21', 'withdrawMin': '6.42', 'withdrawMax': '6973501', 'withdrawInternalMin': '0.00000001', 'depositDust': '0.0012', 'minConfirm': 6, 'unLockConfirm': 64, 'sameAddress': False, 'withdrawTag': False, 'estimatedArrivalTime': 2, 'busy': False, 'contractAddressUrl': 'https://etherscan.io/address/', 'contractAddress': '0x32353a6c91143bfd6c7d363b546e62a9a2489a20'}]}, {'coin': 'STPT', 'depositAllEnable': False, 'withdrawAllEnable': False, 'name': 'Standard Tokenization Protocol', 'free': '0', 'locked': '0', 'freeze': '0', 'withdrawing': '0', 'ipoing': '0', 'ipoable': '0', 'storage': '0', 'isLegalMoney': False, 'trading': False, 'networkList': [{'network': 'ETH', 'coin': 'STPT', 'withdrawIntegerMultiple': '0.00000001', 'isDefault': True, 'depositEnable': False, 'withdrawEnable': False, 'depositDesc': 'Deposit for this token is not supported, please try other networks.', 'withdrawDesc': 'Withdrawal for this token is not supported, please try other networks.', 'specialTips': '', 'name': 'Ethereum (ERC20)', 'resetAddressStatus': False, 'addressRegex': '^(0x)[0-9A-Fa-f]{40}$', 'memoRegex': '', 'withdrawFee': '0', 'withdrawMin': '10', 'withdrawMax': '10000000000', 'withdrawInternalMin': '0.00000001', 'depositDust': '0.023', 'minConfirm': 6, 'unLockConfirm': 64, 'sameAddress': False, 'withdrawTag': False, 'estimatedArrivalTime': 2, 'busy': False, 'contractAddressUrl': 'https://etherscan.io/address/', 'contractAddress': '0xde7d85157d9714eadf595045cc12ca4a5f3e2adb'}]}, {'coin': 'SCR', 'depositAllEnable': True, 'withdrawAllEnable': True, 'name': 'Scroll', 'free': '0', 'locked': '0', 'freeze': '0', 'withdrawing': '0', 'ipoing': '0', 'ipoable': '0', 'storage': '0', 'isLegalMoney': False, 'trading': True, 'networkList': [{'network': 'SCROLL', 'coin': 'SCR', 'withdrawIntegerMultiple': '0.00000001', 'isDefault': True, 'depositEnable': True, 'withdrawEnable': True, 'depositDesc': '', 'withdrawDesc': '', 'specialTips': 'SCROLL is a L2 network. After crediting, its corresponding L1 transaction needs to be confirmed before unlocking, which takes approximately 1-2 hours.', 'specialWithdrawTips': '', 'name': 'Scroll', 'resetAddressStatus': False, 'addressRegex': '^(0x)[0-9A-Fa-f]{40}$', 'memoRegex': '', 'withdrawFee': '0.2', 'withdrawMin': '4', 'withdrawMax': '16556291', 'withdrawInternalMin': '0', 'depositDust': '0.00000001', 'minConfirm': 1, 'unLockConfirm': 0, 'sameAddress': False, 'withdrawTag': False, 'estimatedArrivalTime': 1, 'busy': False, 'contractAddressUrl': 'https://scrollscan.com/token/', 'contractAddress': '0xd29687c813d741e2f938f4ac377128810e217b1b'}]}]
+2025-10-06 18:09:25 | INFO | bot | [ALL] user 496805427 — отправлено сообщение с 2 спредами
+2025-10-06 18:09:25 | INFO | bot | [ALL] user 940868721 — отправлено сообщение с 2 спредами
+2025-10-06 18:09:25 | INFO | bot | [ALL] user 1879112903 — отправлено сообщение с 2 спредами
+2025-10-06 18:09:26 | INFO | bot | END _check_and_alert | пар проверено: 7296, уведомлений поставлено в очередь: 30, время: 54.88 сек.
+2025-10-06 18:09:29 | ERROR | TeleBot | Infinity polling: polling exited
+2025-10-06 18:09:29 | ERROR | TeleBot | Break infinity polling
