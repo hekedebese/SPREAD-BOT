@@ -19,6 +19,7 @@ engine = create_async_engine(
     DATABASE_URL,
     echo=False,
     pool_pre_ping=True,
+    pool_recycle=1800,  # 💡 обновляем соединение каждые 30 минут
     future=True,
 )
 
@@ -46,6 +47,8 @@ async def init_db():
     logger.info(f"Использую базу: {DB_PATH}")
 
     async with engine.begin() as conn:
+        # включаем WAL режим для sqlite
+        await conn.exec_driver_sql("PRAGMA journal_mode=WAL;")
         await conn.run_sync(Base.metadata.create_all)
         # ensure notify column exists
         try:

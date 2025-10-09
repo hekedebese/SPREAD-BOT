@@ -9,6 +9,7 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from telebot.async_telebot import AsyncTeleBot
 from telebot import types
 from collections import defaultdict
+from telebot.apihelper import ApiTelegramException
 import maintenance
 from db import (
     init_db, get_user, add_user, update_user,
@@ -163,10 +164,20 @@ async def remaining_trial_text(user_id: int) -> str:
     return "❌ Бесплатный период истёк"
 
 async def safe_send(user_id: int, text: str, **kwargs):
-    """Отправка сообщения с семафором, без поднятия исключения наружу."""
+    """Отправка сообщения с защитой от Flood Wait"""
     try:
         async with SEND_SEMAPHORE:
             await bot.send_message(user_id, text, **kwargs)
+    except ApiTelegramException as e:
+        msg = str(e)
+        import re, asyncio
+        m = re.search(r"retry after (\d+)", msg)
+        if m:
+            wait = int(m.group(1)) + 1
+            logger.warning(f"Flood wait {wait}s for user {user_id}, жду перед повтором...")
+            await asyncio.sleep(wait)
+            return await safe_send(user_id, text, **kwargs)
+        logger.warning(f"Telegram API error: {e}")
     except Exception as e:
         logger.warning(f"send_message to {user_id} failed: {e}")
 
