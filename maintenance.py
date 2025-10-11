@@ -184,6 +184,57 @@ async def daily_summary_task(bot, admins, hour_utc=SUMMARY_HOUR_UTC):
             logger.exception(f"[maintenance] daily_summary failed: {e}")
         await asyncio.sleep(5)
 
+async def cleanup_logs_task(log_dir="logs", keep_days=14):
+    """Автоматическая очистка старых логов"""
+    os.makedirs(log_dir, exist_ok=True)
+    while True:
+        try:
+            now = datetime.now()
+            cutoff = now - timedelta(days=keep_days)
+            removed = 0
+            for f in os.listdir(log_dir):
+                path = os.path.join(log_dir, f)
+                if os.path.isfile(path) and f.endswith(".log"):
+                    mtime = datetime.fromtimestamp(os.path.getmtime(path))
+                    if mtime < cutoff:
+                        os.remove(path)
+                        removed += 1
+            if removed:
+                logger.info(f"[maintenance] очищено {removed} старых лог-файлов")
+        except Exception as e:
+            logger.warning(f"[maintenance] ошибка при очистке логов: {e}")
+        await asyncio.sleep(86400 * 7)  # раз в неделю
+
+async def daily_health_report_task(bot):
+    """Ежедневное сообщение админу, что бот жив"""
+    ADMIN_ID = 1879112903
+    TURKEY_OFFSET = 3  # Турция = UTC+3
+    TARGET_HOUR_LOCAL = 11
+    TARGET_HOUR_UTC = (TARGET_HOUR_LOCAL - TURKEY_OFFSET) % 24
+
+    while True:
+        now = datetime.now(timezone.utc)
+        next_run = datetime(year=now.year, month=now.month, day=now.day, tzinfo=timezone.utc)
+        next_run = next_run.replace(hour=TARGET_HOUR_UTC, minute=0, second=0, microsecond=0)
+        if next_run <= now:
+            next_run += timedelta(days=1)
+        wait = (next_run - now).total_seconds()
+        logger.info(f"[maintenance] daily_health_report_task sleeping {wait:.1f}s until {next_run.isoformat()}")
+        await asyncio.sleep(wait)
+
+        try:
+            msg = (
+                "✅ Бот работает стабильно.\n"
+                "Всё функционирует как надо 💪\n\n"
+                f"Время отчёта: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+            )
+            await bot.send_message(ADMIN_ID, msg)
+            logger.info("[maintenance] daily_health_report_task: сообщение отправлено админу")
+        except Exception as e:
+            logger.warning(f"[maintenance] daily_health_report_task: не удалось отправить сообщение админу: {e}")
+
+        await asyncio.sleep(5)
+
 async def start_background_tasks(bot, admins=None):
     """Запускать при старте бота: создаёт фоновые задачи"""
     if admins is None:
@@ -192,4 +243,6 @@ async def start_background_tasks(bot, admins=None):
     asyncio.create_task(daily_backup_task())
     asyncio.create_task(daily_cleanup_task())
     asyncio.create_task(daily_summary_task(bot, admins))
+    asyncio.create_task(cleanup_logs_task())  # 🔥 добавляем сюда
+    asyncio.create_task(daily_health_report_task(bot))
     logger.info("[maintenance] background tasks started")

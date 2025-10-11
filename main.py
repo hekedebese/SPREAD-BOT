@@ -1,9 +1,25 @@
 # main.py (исправленный — полный)
 import logging
 import asyncio
+import traceback
+
+async def safe_send_admin(bot, text: str):
+    """Отправляет админу сообщение об ошибке, не падая"""
+    try:
+        from config import ADMINS
+        for admin_id in ADMINS:
+            try:
+                await bot.send_message(admin_id, f"⚠️ Ошибка:\n\n{text[:4000]}")
+            except Exception:
+                pass
+    except Exception:
+        pass
+
+
 import random
 import time
 from datetime import datetime, timezone, timedelta
+START_TIME = datetime.now(timezone.utc)
 from logging.handlers import TimedRotatingFileHandler
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from telebot.async_telebot import AsyncTeleBot
@@ -487,6 +503,7 @@ async def main_menu_handler(message):
     user_id = message.chat.id
     text = (message.text or "").strip()
     logger.warning(f"[DEBUG MESSAGE FLOW] user_id={user_id}, text='{text}', repr={repr(text)}")
+    
 
     # --- команда /approve (для админов) ---
     if text.startswith("/approve"):
@@ -527,6 +544,22 @@ async def main_menu_handler(message):
         except ValueError:
             await bot.send_message(user_id, "user_id должен быть числом")
         return  # выходим сразу, не идём дальше
+
+    # --- команда /healthcheck (только для админа) ---
+    if text.startswith("/healthcheck"):
+        if user_id not in ADMINS:
+            await bot.send_message(user_id, "⛔ У вас нет прав для этой команды.")
+            return
+
+        uptime = datetime.now(timezone.utc) - START_TIME
+        msg = (
+            "🩺 *Health Check*\n"
+            "Бот работает исправно ✅\n"
+            f"⏱ Аптайм: {uptime}"
+        )
+        await bot.send_message(user_id, msg, parse_mode="Markdown")
+        return
+
 
     # --- если ждём монету ---
     if user_states.get(user_id) == "waiting_for_coin":
@@ -769,4 +802,13 @@ async def main():
     await bot.infinity_polling(skip_pending=True)
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    try:
+        asyncio.run(main())
+    except Exception as e:
+        import asyncio, traceback
+        error_text = ''.join(traceback.format_exception(type(e), e, e.__traceback__))
+        try:
+            asyncio.run(safe_send_admin(bot, error_text))
+        except Exception:
+            pass
+        raise
