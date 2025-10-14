@@ -1,0 +1,86 @@
+2025-10-10 15:01:45 | INFO | bot | Использую базу: C:\Users\90533\PC\Desktop\сспред\bot.db
+2025-10-10 15:01:45 | INFO | bot | [DB] get_all_users_full вернул: 3 строк
+2025-10-10 15:01:45 | INFO | bot | [DB] user_id=496805427, subscription=1, trial_end_raw=2025-09-07 10:26:39.942042, trial_end_parsed=2025-09-07 10:26:39.942042+00:00, filter=5-12%
+2025-10-10 15:01:45 | INFO | bot | [DB] user_id=940868721, subscription=1, trial_end_raw=2025-10-18 12:53:23.521462, trial_end_parsed=2025-10-18 12:53:23.521462+00:00, filter=5-12%
+2025-10-10 15:01:45 | INFO | bot | [DB] user_id=1879112903, subscription=1, trial_end_raw=2025-11-05 10:59:36.892438, trial_end_parsed=2025-11-05 10:59:36.892438+00:00, filter=5-12%
+2025-10-10 15:01:45 | INFO | bot | [DB] USERS_CACHE заполнен: 3 записей
+2025-10-10 15:01:45 | INFO | bot | [main] USERS_CACHE загружен: 3 записей.
+2025-10-10 15:01:45 | INFO | bot | [main] sample -> 496805427: {'subscription': 1, 'trial_end': datetime.datetime(2025, 9, 7, 10, 26, 39, 942042, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-10 15:01:45 | INFO | bot | [main] sample -> 940868721: {'subscription': 1, 'trial_end': datetime.datetime(2025, 10, 18, 12, 53, 23, 521462, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-10 15:01:45 | INFO | bot | [main] sample -> 1879112903: {'subscription': 1, 'trial_end': datetime.datetime(2025, 11, 5, 10, 59, 36, 892438, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-10 15:01:45 | INFO | bot | [DB:update_user] user_id=1879112903 incoming kwargs={'subscription': 1}
+2025-10-10 15:01:45 | INFO | bot | [DB:update_user] user_id=1879112903 after update filter_value='5-12%' kwargs={'subscription': 1}
+2025-10-10 15:01:45 | INFO | bot | [DB:update_user] user_id=496805427 incoming kwargs={'subscription': 1}
+2025-10-10 15:01:45 | INFO | bot | [DB:update_user] user_id=496805427 after update filter_value='5-12%' kwargs={'subscription': 1}
+2025-10-10 15:01:45 | INFO | bot | [DB:update_user] user_id=940868721 incoming kwargs={'subscription': 1}
+2025-10-10 15:01:45 | INFO | bot | [DB:update_user] user_id=940868721 after update filter_value='5-12%' kwargs={'subscription': 1}
+2025-10-10 15:01:45 | INFO | bot | [maintenance] background tasks started
+2025-10-10 15:01:45 | INFO | bot | 🤖 Бот запущен.
+2025-10-10 15:01:45 | INFO | bot | [maintenance] daily_backup_task sleeping 43094.7s until 2025-10-11T00:00:00+00:00
+2025-10-10 15:01:45 | INFO | bot | [maintenance] daily_summary_task sleeping 46694.7s until 2025-10-11T01:00:00+00:00
+2025-10-10 15:01:45 | INFO | bot | [DB] get_all_users_full вернул: 3 строк
+2025-10-10 15:01:45 | INFO | bot | [DB] user_id=496805427, subscription=1, trial_end_raw=2025-09-07 10:26:39.942042, trial_end_parsed=2025-09-07 10:26:39.942042+00:00, filter=5-12%
+2025-10-10 15:01:45 | INFO | bot | [DB] user_id=940868721, subscription=1, trial_end_raw=2025-10-18 12:53:23.521462, trial_end_parsed=2025-10-18 12:53:23.521462+00:00, filter=5-12%
+2025-10-10 15:01:45 | INFO | bot | [DB] user_id=1879112903, subscription=1, trial_end_raw=2025-11-05 10:59:36.892438, trial_end_parsed=2025-11-05 10:59:36.892438+00:00, filter=5-12%
+2025-10-10 15:01:45 | INFO | bot | [DB] USERS_CACHE заполнен: 3 записей
+2025-10-10 15:02:03 | WARNING | bot | [DEBUG MESSAGE FLOW] user_id=1879112903, text='/health', repr='/health'
+2025-10-10 15:02:15 | ERROR | TeleBot | Infinity polling: polling exited
+2025-10-10 15:02:15 | ERROR | TeleBot | Break infinity polling
+2025-10-10 15:02:59 | INFO | bot | Использую базу: C:\Users\90533\PC\Desktop\сспред\bot.db
+2025-10-10 15:02:59 | INFO | bot | [DB] get_all_users_full вернул: 3 строк
+2025-10-10 15:02:59 | INFO | bot | [DB] user_id=496805427, subscription=1, trial_end_raw=2025-09-07 10:26:39.942042, trial_end_parsed=2025-09-07 10:26:39.942042+00:00, filter=5-12%
+2025-10-10 15:02:59 | INFO | bot | [DB] user_id=940868721, subscription=1, trial_end_raw=2025-10-18 12:53:23.521462, trial_end_parsed=2025-10-18 12:53:23.521462+00:00, filter=5-12%
+2025-10-10 15:02:59 | INFO | bot | [DB] user_id=1879112903, subscription=1, trial_end_raw=2025-11-05 10:59:36.892438, trial_end_parsed=2025-11-05 10:59:36.892438+00:00, filter=5-12%
+2025-10-10 15:02:59 | INFO | bot | [DB] USERS_CACHE заполнен: 3 записей
+2025-10-10 15:02:59 | INFO | bot | [main] USERS_CACHE загружен: 3 записей.
+2025-10-10 15:02:59 | INFO | bot | [main] sample -> 496805427: {'subscription': 1, 'trial_end': datetime.datetime(2025, 9, 7, 10, 26, 39, 942042, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-10 15:02:59 | INFO | bot | [main] sample -> 940868721: {'subscription': 1, 'trial_end': datetime.datetime(2025, 10, 18, 12, 53, 23, 521462, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-10 15:02:59 | INFO | bot | [main] sample -> 1879112903: {'subscription': 1, 'trial_end': datetime.datetime(2025, 11, 5, 10, 59, 36, 892438, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-10 15:02:59 | INFO | bot | [DB:update_user] user_id=1879112903 incoming kwargs={'subscription': 1}
+2025-10-10 15:02:59 | INFO | bot | [DB:update_user] user_id=1879112903 after update filter_value='5-12%' kwargs={'subscription': 1}
+2025-10-10 15:02:59 | INFO | bot | [DB:update_user] user_id=496805427 incoming kwargs={'subscription': 1}
+2025-10-10 15:02:59 | INFO | bot | [DB:update_user] user_id=496805427 after update filter_value='5-12%' kwargs={'subscription': 1}
+2025-10-10 15:02:59 | INFO | bot | [DB:update_user] user_id=940868721 incoming kwargs={'subscription': 1}
+2025-10-10 15:02:59 | INFO | bot | [DB:update_user] user_id=940868721 after update filter_value='5-12%' kwargs={'subscription': 1}
+2025-10-10 15:02:59 | INFO | bot | [maintenance] background tasks started
+2025-10-10 15:02:59 | INFO | bot | 🤖 Бот запущен.
+2025-10-10 15:02:59 | INFO | bot | [maintenance] daily_backup_task sleeping 43020.1s until 2025-10-11T00:00:00+00:00
+2025-10-10 15:02:59 | INFO | bot | [maintenance] daily_summary_task sleeping 46620.1s until 2025-10-11T01:00:00+00:00
+2025-10-10 15:02:59 | INFO | bot | [DB] get_all_users_full вернул: 3 строк
+2025-10-10 15:02:59 | INFO | bot | [DB] user_id=496805427, subscription=1, trial_end_raw=2025-09-07 10:26:39.942042, trial_end_parsed=2025-09-07 10:26:39.942042+00:00, filter=5-12%
+2025-10-10 15:02:59 | INFO | bot | [DB] user_id=940868721, subscription=1, trial_end_raw=2025-10-18 12:53:23.521462, trial_end_parsed=2025-10-18 12:53:23.521462+00:00, filter=5-12%
+2025-10-10 15:02:59 | INFO | bot | [DB] user_id=1879112903, subscription=1, trial_end_raw=2025-11-05 10:59:36.892438, trial_end_parsed=2025-11-05 10:59:36.892438+00:00, filter=5-12%
+2025-10-10 15:02:59 | INFO | bot | [DB] USERS_CACHE заполнен: 3 записей
+2025-10-10 15:03:02 | WARNING | bot | [DEBUG MESSAGE FLOW] user_id=1879112903, text='/health', repr='/health'
+2025-10-10 15:03:04 | WARNING | bot | [DEBUG MESSAGE FLOW] user_id=1879112903, text='u', repr='u'
+2025-10-10 15:03:10 | ERROR | TeleBot | Infinity polling: polling exited
+2025-10-10 15:03:10 | ERROR | TeleBot | Break infinity polling
+2025-10-10 15:23:41 | INFO | bot | Использую базу: C:\Users\90533\PC\Desktop\сспред\bot.db
+2025-10-10 15:23:41 | INFO | bot | [DB] get_all_users_full вернул: 3 строк
+2025-10-10 15:23:41 | INFO | bot | [DB] user_id=496805427, subscription=1, trial_end_raw=2025-09-07 10:26:39.942042, trial_end_parsed=2025-09-07 10:26:39.942042+00:00, filter=5-12%
+2025-10-10 15:23:41 | INFO | bot | [DB] user_id=940868721, subscription=1, trial_end_raw=2025-10-18 12:53:23.521462, trial_end_parsed=2025-10-18 12:53:23.521462+00:00, filter=5-12%
+2025-10-10 15:23:41 | INFO | bot | [DB] user_id=1879112903, subscription=1, trial_end_raw=2025-11-05 10:59:36.892438, trial_end_parsed=2025-11-05 10:59:36.892438+00:00, filter=5-12%
+2025-10-10 15:23:41 | INFO | bot | [DB] USERS_CACHE заполнен: 3 записей
+2025-10-10 15:23:41 | INFO | bot | [main] USERS_CACHE загружен: 3 записей.
+2025-10-10 15:23:41 | INFO | bot | [main] sample -> 496805427: {'subscription': 1, 'trial_end': datetime.datetime(2025, 9, 7, 10, 26, 39, 942042, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-10 15:23:41 | INFO | bot | [main] sample -> 940868721: {'subscription': 1, 'trial_end': datetime.datetime(2025, 10, 18, 12, 53, 23, 521462, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-10 15:23:41 | INFO | bot | [main] sample -> 1879112903: {'subscription': 1, 'trial_end': datetime.datetime(2025, 11, 5, 10, 59, 36, 892438, tzinfo=datetime.timezone.utc), 'filter': '5-12%', 'notify': 1}
+2025-10-10 15:23:41 | INFO | bot | [DB:update_user] user_id=1879112903 incoming kwargs={'subscription': 1}
+2025-10-10 15:23:41 | INFO | bot | [DB:update_user] user_id=1879112903 after update filter_value='5-12%' kwargs={'subscription': 1}
+2025-10-10 15:23:41 | INFO | bot | [DB:update_user] user_id=496805427 incoming kwargs={'subscription': 1}
+2025-10-10 15:23:41 | INFO | bot | [DB:update_user] user_id=496805427 after update filter_value='5-12%' kwargs={'subscription': 1}
+2025-10-10 15:23:41 | INFO | bot | [DB:update_user] user_id=940868721 incoming kwargs={'subscription': 1}
+2025-10-10 15:23:41 | INFO | bot | [DB:update_user] user_id=940868721 after update filter_value='5-12%' kwargs={'subscription': 1}
+2025-10-10 15:23:41 | INFO | bot | [maintenance] background tasks started
+2025-10-10 15:23:41 | INFO | bot | 🤖 Бот запущен.
+2025-10-10 15:23:41 | INFO | bot | [maintenance] daily_backup_task sleeping 41778.6s until 2025-10-11T00:00:00+00:00
+2025-10-10 15:23:41 | INFO | bot | [maintenance] daily_summary_task sleeping 45378.6s until 2025-10-11T01:00:00+00:00
+2025-10-10 15:23:41 | INFO | bot | [DB] get_all_users_full вернул: 3 строк
+2025-10-10 15:23:41 | INFO | bot | [DB] user_id=496805427, subscription=1, trial_end_raw=2025-09-07 10:26:39.942042, trial_end_parsed=2025-09-07 10:26:39.942042+00:00, filter=5-12%
+2025-10-10 15:23:41 | INFO | bot | [DB] user_id=940868721, subscription=1, trial_end_raw=2025-10-18 12:53:23.521462, trial_end_parsed=2025-10-18 12:53:23.521462+00:00, filter=5-12%
+2025-10-10 15:23:41 | INFO | bot | [DB] user_id=1879112903, subscription=1, trial_end_raw=2025-11-05 10:59:36.892438, trial_end_parsed=2025-11-05 10:59:36.892438+00:00, filter=5-12%
+2025-10-10 15:23:41 | INFO | bot | [DB] USERS_CACHE заполнен: 3 записей
+2025-10-10 15:23:50 | WARNING | bot | [DEBUG MESSAGE FLOW] user_id=1879112903, text='/healthckeck', repr='/healthckeck'
+2025-10-10 15:23:58 | WARNING | bot | [DEBUG MESSAGE FLOW] user_id=1879112903, text='/healthcheck', repr='/healthcheck'
+2025-10-10 15:24:04 | ERROR | TeleBot | Infinity polling: polling exited
+2025-10-10 15:24:04 | ERROR | TeleBot | Break infinity polling

@@ -280,7 +280,7 @@ async def log_random_spreads_to_file(prices: dict, sample_size: int = 30):
 # ---------- АЛЕРТЫ ----------
 LAST_ALERTS = {}  # {user_id: {symbol: datetime}}
 
-# ---------- АЛЕРТЫ (с расширенным логированием) ----------
+# ---------- АЛЕРТЫ (с защитой и уведомлением админа) ----------
 async def _check_and_alert():
     logger.info("START _check_and_alert")
     start_time = time.time()
@@ -331,126 +331,113 @@ async def _check_and_alert():
             "mexc_fut": "https://www.mexc.com/futures/{symbol}_USDT?type=linear_swap",
         }
 
+        # --- Основной цикл проверки спредов ---
         for symbol, data in prices.items():
-            sources = list(data.keys())
-            for i in range(len(sources)):
-                for j in range(i + 1, len(sources)):
-                    src1, src2 = sources[i], sources[j]
-                    t1, t2 = MARKETS[src1]["type"], MARKETS[src2]["type"]
-                    if t1 == "spot" and t2 == "spot":
-                        continue
-                    p1, p2 = data[src1], data[src2]
-                    if not p1 or not p2:
-                        continue
-
-                    spread = abs(p1 - p2) / ((p1 + p2) / 2) * 100
-                    total_pairs += 1
-                    if spread > max_spread:
-                        max_spread = spread
-                    top_spreads.append((spread, symbol, src1, src2, p1, p2))
-
-                    if spread < SPREAD_THRESHOLD_PERCENT:
-                        continue
-
-                    for user_id, info in list(USERS_CACHE.items()):
-                        try:
-                            access = await has_access(user_id)
-                        except Exception as e:
-                            logger.warning(f"has_access failed for user {user_id}: {e}")
-                            access = False
-
-                        if not access:
-                            logger.debug(f"[{symbol}] user {user_id} — доступ нет")
-                            continue
-
-                        if int(info.get("notify", 1)) == 0:
-                            logger.debug(f"[{symbol}] user {user_id} — notify=0, пропуск")
-                            continue
-
-                        user_filter = info.get("filter")
-                        if not passes_filter(spread, user_filter):
-                            logger.debug(f"[{symbol}] user {user_id} — фильтр не прошёл ({user_filter})")
-                            continue
-
-                        if "collected_spreads" not in info:
-                            info["collected_spreads"] = {}
-                        if symbol not in info["collected_spreads"]:
-                            info["collected_spreads"][symbol] = []
-                        info["collected_spreads"][symbol].append({
-                            "spread": spread,
-                            "src1": src1,
-                            "src2": src2,
-                            "p1": p1,
-                            "p2": p2,
-                            "url1": url_map[src1].format(symbol=symbol),
-                            "url2": url_map[src2].format(symbol=symbol),
-                        })
-
-            # --- отправка сообщений ---
-            for user_id, info in list(USERS_CACHE.items()):
-                if int(info.get("notify", 1)) == 0:
-                    continue
-
-                if "collected_spreads" in info and symbol in info["collected_spreads"]:
-                    entries = info["collected_spreads"][symbol]
-                    spread_percent = entries[0]["spread"]
-
-                    now = datetime.now(timezone.utc)
-                    last_alert = LAST_ALERTS.get(user_id, {}).get(symbol)
-                    should_send = True
-
-                    if last_alert:
-                        last_time, last_spread = last_alert
-                        if (now - last_time) < timedelta(minutes=ALERT_COOLDOWN_MINUTES):
-                            should_send = False
-                        elif last_spread is not None and abs(spread_percent - last_spread) < SPREAD_CHANGE_THRESHOLD:
-                            should_send = False
-
-                    if should_send:
-                        text = f"Монета: <b>{symbol}</b>\n\n"
-                        for e in entries:
-                            dep1, wdr1 = await get_symbol_status(e["src1"], symbol)
-                            dep2, wdr2 = await get_symbol_status(e["src2"], symbol)
-
-                            text += (
-                                f'<a href="{e["url1"]}">{EXCHANGE_NAMES.get(e["src1"], e["src1"])}</a> 🔄 '
-                                f'<a href="{e["url2"]}">{EXCHANGE_NAMES.get(e["src2"], e["src2"])}</a>\n'
-                                f'📈 Спред: {e["spread"]:.2f}%\n'
-                                f'💰 {EXCHANGE_NAMES.get(e["src1"], e["src1"])}: {e["p1"]:.6f}\n'
-                                f'💰 {EXCHANGE_NAMES.get(e["src2"], e["src2"])}: {e["p2"]:.6f}\n\n'
-                                f'Депозит: {"✅" if dep1 or dep2 else "❌"}\n'
-                                f'Вывод: {"✅" if wdr1 or wdr2 else "❌"}\n\n'
-                            )
-
-                        text += f"🔖 Тикер: <code>{symbol}</code>"
-
-                        send_tasks.append(
-                            safe_send(
-                                user_id,
-                                text,
-                                parse_mode="HTML",
-                                disable_web_page_preview=True
-                            )
-                        )
-                        sent_count += 1
-                        if user_id not in LAST_ALERTS:
-                            LAST_ALERTS[user_id] = {}
-                        LAST_ALERTS[user_id][symbol] = (now, spread_percent)
-                        logger.info(f"[{symbol}] user {user_id} — отправлено сообщение с {len(entries)} спредами")
-                    else:
-                        logger.debug(f"[{symbol}] user {user_id} — кулдаун или изменение < {SPREAD_CHANGE_THRESHOLD}% → пропуск")
-
-                    info["collected_spreads"].pop(symbol, None)
-
-        if sent_count == 0:
             try:
-                top_spreads_sorted = sorted(top_spreads, key=lambda x: x[0], reverse=True)[:20]
-                logger.info("Top spreads (top 20) — возможно причины неполучения уведомлений:")
-                for s, sym, a, b, p1, p2 in top_spreads_sorted:
-                    logger.info(f"{sym} {a} vs {b}: {s:.2f}% — {p1:.6f} / {p2:.6f}")
-                logger.info(f"Максимальный спред в проходе: {max_spread:.2f}%")
+                sources = list(data.keys())
+                for i in range(len(sources)):
+                    for j in range(i + 1, len(sources)):
+                        src1, src2 = sources[i], sources[j]
+                        t1, t2 = MARKETS[src1]["type"], MARKETS[src2]["type"]
+                        if t1 == "spot" and t2 == "spot":
+                            continue
+                        p1, p2 = data[src1], data[src2]
+                        if not p1 or not p2:
+                            continue
+
+                        spread = abs(p1 - p2) / ((p1 + p2) / 2) * 100
+                        total_pairs += 1
+                        if spread > max_spread:
+                            max_spread = spread
+                        top_spreads.append((spread, symbol, src1, src2, p1, p2))
+
+                        if spread < SPREAD_THRESHOLD_PERCENT:
+                            continue
+
+                        # --- цикл по пользователям ---
+                        for user_id, info in list(USERS_CACHE.items()):
+                            try:
+                                access = await has_access(user_id)
+                            except Exception as e:
+                                logger.warning(f"has_access failed for user {user_id}: {e}")
+                                access = False
+
+                            if not access:
+                                continue
+
+                            if int(info.get("notify", 1)) == 0:
+                                continue
+
+                            user_filter = info.get("filter")
+                            if not passes_filter(spread, user_filter):
+                                continue
+
+                            if "collected_spreads" not in info:
+                                info["collected_spreads"] = {}
+                            if symbol not in info["collected_spreads"]:
+                                info["collected_spreads"][symbol] = []
+                            info["collected_spreads"][symbol].append({
+                                "spread": spread,
+                                "src1": src1,
+                                "src2": src2,
+                                "p1": p1,
+                                "p2": p2,
+                                "url1": url_map[src1].format(symbol=symbol),
+                                "url2": url_map[src2].format(symbol=symbol),
+                            })
+
+                # --- отправка сообщений ---
+                for user_id, info in list(USERS_CACHE.items()):
+                    if int(info.get("notify", 1)) == 0:
+                        continue
+
+                    if "collected_spreads" in info and symbol in info["collected_spreads"]:
+                        entries = info["collected_spreads"][symbol]
+                        spread_percent = entries[0]["spread"]
+
+                        now = datetime.now(timezone.utc)
+                        last_alert = LAST_ALERTS.get(user_id, {}).get(symbol)
+                        should_send = True
+
+                        if last_alert:
+                            last_time, last_spread = last_alert
+                            if (now - last_time) < timedelta(minutes=ALERT_COOLDOWN_MINUTES):
+                                should_send = False
+                            elif last_spread is not None and abs(spread_percent - last_spread) < SPREAD_CHANGE_THRESHOLD:
+                                should_send = False
+
+                        if should_send:
+                            text = f"Монета: <b>{symbol}</b>\n\n"
+                            for e in entries:
+                                dep1, wdr1 = await get_symbol_status(e["src1"], symbol)
+                                dep2, wdr2 = await get_symbol_status(e["src2"], symbol)
+                                text += (
+                                    f'<a href="{e["url1"]}">{EXCHANGE_NAMES.get(e["src1"], e["src1"])}</a> 🔄 '
+                                    f'<a href="{e["url2"]}">{EXCHANGE_NAMES.get(e["src2"], e["src2"])}</a>\n'
+                                    f'📈 Спред: {e["spread"]:.2f}%\n'
+                                    f'💰 {EXCHANGE_NAMES.get(e["src1"], e["src1"])}: {e["p1"]:.6f}\n'
+                                    f'💰 {EXCHANGE_NAMES.get(e["src2"], e["src2"])}: {e["p2"]:.6f}\n\n'
+                                    f'Депозит: {"✅" if dep1 or dep2 else "❌"}\n'
+                                    f'Вывод: {"✅" if wdr1 or wdr2 else "❌"}\n\n'
+                                )
+                            text += f"🔖 Тикер: <code>{symbol}</code>"
+
+                            send_tasks.append(
+                                safe_send(
+                                    user_id,
+                                    text,
+                                    parse_mode="HTML",
+                                    disable_web_page_preview=True
+                                )
+                            )
+                            sent_count += 1
+                            if user_id not in LAST_ALERTS:
+                                LAST_ALERTS[user_id] = {}
+                            LAST_ALERTS[user_id][symbol] = (now, spread_percent)
+                            logger.info(f"[{symbol}] user {user_id} — отправлено сообщение с {len(entries)} спредами")
+                        info["collected_spreads"].pop(symbol, None)
             except Exception as e:
-                logger.warning(f"Failed to log top spreads: {e}")
+                logger.warning(f"Ошибка при обработке монеты {symbol}: {e}")
 
         if send_tasks:
             results = await asyncio.gather(*send_tasks, return_exceptions=True)
@@ -459,7 +446,9 @@ async def _check_and_alert():
                     logger.warning(f"Error in send task: {res}")
 
     except Exception as e:
-        logger.exception(f"_check_and_alert failed: {e}")
+        logger.exception(f"_check_and_alert crashed: {e}")
+        await safe_send_admin(bot, f"❌ Ошибка в _check_and_alert:\n{e}")
+
     finally:
         elapsed = round(time.time() - start_time, 2)
         logger.info(f"END _check_and_alert | пар проверено: {total_pairs}, уведомлений поставлено в очередь: {sent_count}, время: {elapsed} сек.")

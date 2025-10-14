@@ -235,6 +235,41 @@ async def daily_health_report_task(bot):
 
         await asyncio.sleep(5)
 
+async def subscription_expiration_task(bot):
+    """Проверяет окончание подписок и отключает их"""
+    from db import get_all_users_full, update_user
+    from datetime import datetime, timezone
+    ADMIN_ID = 1879112903
+
+    while True:
+        now = datetime.now(timezone.utc)
+        next_run = datetime(year=now.year, month=now.month, day=now.day, tzinfo=timezone.utc)
+        next_run = next_run.replace(hour=0, minute=0, second=0, microsecond=0)
+        if next_run <= now:
+            next_run += timedelta(days=1)
+        wait = (next_run - now).total_seconds()
+        logger.info(f"[maintenance] subscription_expiration_task sleeping {wait:.1f}s until {next_run.isoformat()}")
+        await asyncio.sleep(wait)
+
+        try:
+            users = await get_all_users_full()
+            expired = []
+            for u in users:
+                if getattr(u, "subscription", 0) == 1:
+                    trial_end = getattr(u, "trial_end", None)
+                    if trial_end and trial_end < datetime.now(timezone.utc):
+                        await update_user(u.user_id, subscription=0)
+                        expired.append(u.user_id)
+            if expired:
+                msg = "⏳ Подписки автоматически отключены у пользователей:\n" + "\n".join(map(str, expired))
+                await bot.send_message(ADMIN_ID, msg)
+                logger.info(f"[maintenance] subscription_expiration_task: отключено {len(expired)} подписок")
+        except Exception as e:
+            logger.warning(f"[maintenance] subscription_expiration_task error: {e}")
+
+        await asyncio.sleep(5)
+
+
 async def start_background_tasks(bot, admins=None):
     """Запускать при старте бота: создаёт фоновые задачи"""
     if admins is None:
@@ -245,4 +280,5 @@ async def start_background_tasks(bot, admins=None):
     asyncio.create_task(daily_summary_task(bot, admins))
     asyncio.create_task(cleanup_logs_task())  # 🔥 добавляем сюда
     asyncio.create_task(daily_health_report_task(bot))
+    asyncio.create_task(subscription_expiration_task(bot))
     logger.info("[maintenance] background tasks started")

@@ -1,319 +1,326 @@
 📊 Лог 30 случайных монет:
 
-SFP:
-MEXC Spot vs MEXC Futures: 0.10%
-MEXC Spot vs Bitget Futures: 0.04%
-MEXC Spot vs Gate Futures: 0.00%
-MEXC Spot vs Binance Futures: 0.10%
-MEXC Futures vs Bitget Futures: 0.14%
-MEXC Futures vs Gate Futures: 0.10%
-MEXC Futures vs Binance Futures: 0.00%
-MEXC Futures vs BingX Spot: 0.12%
-Bitget Futures vs Gate Futures: 0.04%
-Bitget Futures vs Binance Futures: 0.14%
-Bitget Futures vs BingX Spot: 0.02%
-Gate Futures vs Binance Futures: 0.10%
-Gate Futures vs BingX Spot: 0.02%
-Binance Futures vs BingX Spot: 0.12%
-
-PIPE:
-MEXC Spot vs MEXC Futures: 0.75%
-
-SLP:
-MEXC Spot vs MEXC Futures: 0.19%
+ACT:
+MEXC Spot vs MEXC Futures: 0.00%
 MEXC Spot vs Bitget Futures: 0.00%
-MEXC Spot vs Gate Futures: 0.00%
-MEXC Spot vs Binance Futures: 0.13%
-MEXC Futures vs Bitget Futures: 0.19%
-MEXC Futures vs Gate Futures: 0.19%
-MEXC Futures vs Binance Futures: 0.06%
-MEXC Futures vs BingX Spot: 0.19%
-Bitget Futures vs Gate Futures: 0.00%
-Bitget Futures vs Binance Futures: 0.13%
-Bitget Futures vs BingX Spot: 0.00%
-Gate Futures vs Binance Futures: 0.13%
-Gate Futures vs BingX Spot: 0.00%
+MEXC Spot vs Gate Futures: 0.04%
+MEXC Spot vs Binance Futures: 0.00%
+MEXC Futures vs Bitget Futures: 0.00%
+MEXC Futures vs Gate Futures: 0.04%
+MEXC Futures vs Binance Futures: 0.00%
+MEXC Futures vs BingX Spot: 0.13%
+Bitget Futures vs Gate Futures: 0.04%
+Bitget Futures vs Binance Futures: 0.00%
+Bitget Futures vs BingX Spot: 0.13%
+Gate Futures vs Binance Futures: 0.04%
+Gate Futures vs BingX Spot: 0.18%
 Binance Futures vs BingX Spot: 0.13%
 
-HIGH:
-MEXC Spot vs MEXC Futures: 0.11%
-MEXC Spot vs Gate Futures: 0.17%
-MEXC Spot vs Binance Futures: 0.04%
-MEXC Futures vs Gate Futures: 0.07%
-MEXC Futures vs Binance Futures: 0.07%
-MEXC Futures vs BingX Spot: 0.24%
-Gate Futures vs Binance Futures: 0.13%
-Gate Futures vs BingX Spot: 0.31%
-Binance Futures vs BingX Spot: 0.17%
+UNITE:
+MEXC Spot vs MEXC Futures: 0.45%
 
-TNSR:
-MEXC Spot vs MEXC Futures: 0.20%
-MEXC Spot vs Bitget Futures: 0.20%
-MEXC Spot vs Gate Futures: 0.01%
-MEXC Spot vs Binance Futures: 0.20%
-MEXC Futures vs Bitget Futures: 0.00%
-MEXC Futures vs Gate Futures: 0.21%
-MEXC Futures vs Binance Futures: 0.00%
-MEXC Futures vs BingX Spot: 0.21%
-Bitget Futures vs Gate Futures: 0.21%
-Bitget Futures vs Binance Futures: 0.00%
-Bitget Futures vs BingX Spot: 0.21%
-Gate Futures vs Binance Futures: 0.21%
-Gate Futures vs BingX Spot: 0.00%
-Binance Futures vs BingX Spot: 0.21%
+MNDE:
+MEXC Spot vs MEXC Futures: 0.27%
+MEXC Futures vs BingX Spot: 0.31%
 
-RUNE:
-MEXC Spot vs MEXC Futures: 0.17%
-MEXC Spot vs Bitget Futures: 0.04%
-MEXC Spot vs Gate Futures: 0.03%
-MEXC Spot vs Binance Futures: 0.17%
-MEXC Futures vs Bitget Futures: 0.13%
-MEXC Futures vs Gate Futures: 0.21%
-MEXC Futures vs Binance Futures: 0.00%
-MEXC Futures vs BingX Spot: 0.17%
-Bitget Futures vs Gate Futures: 0.08%
-Bitget Futures vs Binance Futures: 0.13%
-Bitget Futures vs BingX Spot: 0.04%
-Gate Futures vs Binance Futures: 0.21%
-Gate Futures vs BingX Spot: 0.03%
-Binance Futures vs BingX Spot: 0.17%
+MAMO:
+MEXC Spot vs MEXC Futures: 0.85%
+MEXC Futures vs BingX Spot: 2.98%
 
-POPCATUSDC:
-MEXC Spot vs MEXC Futures: 0.09%
+MANYU:
+MEXC Spot vs MEXC Futures: 0.02%
+MEXC Futures vs BingX Spot: 1.47%
 
-RIVER:
-MEXC Spot vs MEXC Futures: 0.30%
-MEXC Futures vs BingX Spot: 0.21%
-
-ICX:
-MEXC Futures vs Bitget Futures: 0.10%
-MEXC Futures vs Gate Futures: 0.07%
-MEXC Futures vs Binance Futures: 0.09%
-MEXC Futures vs BingX Spot: 0.09%
-Bitget Futures vs Gate Futures: 0.17%
-Bitget Futures vs Binance Futures: 0.01%
-Bitget Futures vs BingX Spot: 0.01%
-Gate Futures vs Binance Futures: 0.16%
-Gate Futures vs BingX Spot: 0.16%
-Binance Futures vs BingX Spot: 0.00%
-
-VOXEL:
-MEXC Spot vs MEXC Futures: 0.14%
-MEXC Spot vs Bitget Futures: 0.20%
-MEXC Spot vs Gate Futures: 0.18%
-MEXC Spot vs Binance Futures: 0.20%
-MEXC Futures vs Bitget Futures: 0.06%
-MEXC Futures vs Gate Futures: 0.04%
-MEXC Futures vs Binance Futures: 0.06%
-MEXC Futures vs BingX Spot: 0.12%
-Bitget Futures vs Gate Futures: 0.02%
-Bitget Futures vs Binance Futures: 0.00%
-Bitget Futures vs BingX Spot: 0.06%
-Gate Futures vs Binance Futures: 0.02%
-Gate Futures vs BingX Spot: 0.08%
+AKE:
+MEXC Spot vs MEXC Futures: 0.23%
+MEXC Spot vs Bitget Futures: 0.16%
+MEXC Spot vs Gate Futures: 0.21%
+MEXC Spot vs Binance Futures: 0.12%
+MEXC Futures vs Bitget Futures: 0.07%
+MEXC Futures vs Gate Futures: 0.45%
+MEXC Futures vs Binance Futures: 0.12%
+MEXC Futures vs BingX Spot: 0.06%
+Bitget Futures vs Gate Futures: 0.37%
+Bitget Futures vs Binance Futures: 0.04%
+Bitget Futures vs BingX Spot: 0.02%
+Gate Futures vs Binance Futures: 0.33%
+Gate Futures vs BingX Spot: 0.39%
 Binance Futures vs BingX Spot: 0.06%
 
-VR:
-MEXC Spot vs MEXC Futures: 0.53%
-
-CAMP:
-MEXC Spot vs MEXC Futures: 0.06%
-MEXC Spot vs Bitget Futures: 0.14%
-MEXC Spot vs Gate Futures: 0.14%
-MEXC Futures vs Bitget Futures: 0.19%
-MEXC Futures vs Gate Futures: 0.19%
-MEXC Futures vs BingX Spot: 0.25%
-Bitget Futures vs Gate Futures: 0.00%
-Bitget Futures vs BingX Spot: 0.06%
-Gate Futures vs BingX Spot: 0.06%
-
-BERA:
-MEXC Spot vs MEXC Futures: 0.00%
-MEXC Spot vs Bitget Futures: 0.04%
-MEXC Spot vs Gate Futures: 0.00%
-MEXC Spot vs Binance Futures: 0.00%
-MEXC Futures vs Bitget Futures: 0.04%
-MEXC Futures vs Gate Futures: 0.00%
-MEXC Futures vs Binance Futures: 0.00%
-MEXC Futures vs BingX Spot: 0.11%
-Bitget Futures vs Gate Futures: 0.04%
-Bitget Futures vs Binance Futures: 0.04%
-Bitget Futures vs BingX Spot: 0.15%
-Gate Futures vs Binance Futures: 0.00%
-Gate Futures vs BingX Spot: 0.11%
-Binance Futures vs BingX Spot: 0.11%
-
-BOME:
-MEXC Spot vs MEXC Futures: 0.03%
-MEXC Spot vs Bitget Futures: 0.09%
-MEXC Spot vs Gate Futures: 0.03%
-MEXC Spot vs Binance Futures: 0.03%
-MEXC Futures vs Bitget Futures: 0.06%
-MEXC Futures vs Gate Futures: 0.06%
-MEXC Futures vs Binance Futures: 0.06%
-MEXC Futures vs BingX Spot: 0.06%
-Bitget Futures vs Gate Futures: 0.12%
-Bitget Futures vs Binance Futures: 0.12%
-Bitget Futures vs BingX Spot: 0.12%
-Gate Futures vs Binance Futures: 0.00%
-Gate Futures vs BingX Spot: 0.00%
-Binance Futures vs BingX Spot: 0.00%
-
-SPELL:
-MEXC Spot vs MEXC Futures: 0.07%
+PIPPIN:
+MEXC Spot vs MEXC Futures: 0.31%
 MEXC Spot vs Bitget Futures: 0.05%
-MEXC Spot vs Gate Futures: 0.18%
+MEXC Spot vs Gate Futures: 0.09%
 MEXC Spot vs Binance Futures: 0.09%
-MEXC Futures vs Bitget Futures: 0.11%
-MEXC Futures vs Gate Futures: 0.12%
-MEXC Futures vs Binance Futures: 0.02%
-MEXC Futures vs BingX Spot: 0.16%
-Bitget Futures vs Gate Futures: 0.23%
+MEXC Futures vs Bitget Futures: 0.36%
+MEXC Futures vs Gate Futures: 0.22%
+MEXC Futures vs Binance Futures: 0.21%
+MEXC Futures vs BingX Spot: 0.36%
+Bitget Futures vs Gate Futures: 0.14%
 Bitget Futures vs Binance Futures: 0.14%
-Bitget Futures vs BingX Spot: 0.05%
-Gate Futures vs Binance Futures: 0.09%
-Gate Futures vs BingX Spot: 0.28%
-Binance Futures vs BingX Spot: 0.18%
+Bitget Futures vs BingX Spot: 0.00%
+Gate Futures vs Binance Futures: 0.01%
+Gate Futures vs BingX Spot: 0.14%
+Binance Futures vs BingX Spot: 0.14%
 
-STORJ:
-MEXC Spot vs MEXC Futures: 0.09%
-MEXC Spot vs Bitget Futures: 0.00%
+IDOL:
+MEXC Spot vs MEXC Futures: 0.32%
+MEXC Spot vs Bitget Futures: 0.21%
+MEXC Spot vs Gate Futures: 0.41%
+MEXC Spot vs Binance Futures: 0.42%
+MEXC Futures vs Bitget Futures: 0.11%
+MEXC Futures vs Gate Futures: 0.73%
+MEXC Futures vs Binance Futures: 0.11%
+MEXC Futures vs BingX Spot: 0.16%
+Bitget Futures vs Gate Futures: 0.62%
+Bitget Futures vs Binance Futures: 0.21%
+Bitget Futures vs BingX Spot: 0.05%
+Gate Futures vs Binance Futures: 0.83%
+Gate Futures vs BingX Spot: 0.57%
+Binance Futures vs BingX Spot: 0.26%
+
+TAI:
+MEXC Spot vs MEXC Futures: 0.04%
+MEXC Spot vs Bitget Futures: 0.22%
 MEXC Spot vs Gate Futures: 0.13%
+MEXC Futures vs Bitget Futures: 0.18%
+MEXC Futures vs Gate Futures: 0.09%
+Bitget Futures vs Gate Futures: 0.09%
+
+ALL:
+MEXC Futures vs Gate Futures: 8.85%
+MEXC Futures vs Binance Futures: 0.07%
+Gate Futures vs Binance Futures: 8.92%
+
+TRX:
+MEXC Spot vs MEXC Futures: 0.06%
+MEXC Spot vs Bitget Futures: 0.03%
+MEXC Spot vs Gate Futures: 0.10%
+MEXC Spot vs Binance Futures: 0.06%
+MEXC Futures vs Bitget Futures: 0.03%
+MEXC Futures vs Gate Futures: 0.04%
+MEXC Futures vs Binance Futures: 0.00%
+MEXC Futures vs BingX Spot: 0.03%
+Bitget Futures vs Gate Futures: 0.07%
+Bitget Futures vs Binance Futures: 0.03%
+Bitget Futures vs BingX Spot: 0.00%
+Gate Futures vs Binance Futures: 0.04%
+Gate Futures vs BingX Spot: 0.07%
+Binance Futures vs BingX Spot: 0.03%
+
+SCR:
+MEXC Spot vs MEXC Futures: 0.00%
+MEXC Spot vs Bitget Futures: 0.00%
+MEXC Spot vs Gate Futures: 0.41%
+MEXC Spot vs Binance Futures: 0.00%
+MEXC Futures vs Bitget Futures: 0.00%
+MEXC Futures vs Gate Futures: 0.41%
+MEXC Futures vs Binance Futures: 0.00%
+MEXC Futures vs BingX Spot: 0.35%
+Bitget Futures vs Gate Futures: 0.41%
+Bitget Futures vs Binance Futures: 0.00%
+Bitget Futures vs BingX Spot: 0.35%
+Gate Futures vs Binance Futures: 0.41%
+Gate Futures vs BingX Spot: 0.06%
+Binance Futures vs BingX Spot: 0.35%
+
+AIOZ:
+MEXC Futures vs Bitget Futures: 0.00%
+MEXC Futures vs Gate Futures: 0.69%
+MEXC Futures vs BingX Spot: 0.30%
+Bitget Futures vs Gate Futures: 0.69%
+Bitget Futures vs BingX Spot: 0.30%
+Gate Futures vs BingX Spot: 0.38%
+
+ALGOUSDC:
+MEXC Spot vs MEXC Futures: 0.15%
+
+KAITO:
+MEXC Spot vs MEXC Futures: 0.12%
+MEXC Spot vs Bitget Futures: 0.17%
+MEXC Spot vs Gate Futures: 0.14%
+MEXC Spot vs Binance Futures: 0.09%
+MEXC Futures vs Bitget Futures: 0.05%
+MEXC Futures vs Gate Futures: 0.03%
+MEXC Futures vs Binance Futures: 0.03%
+MEXC Futures vs BingX Spot: 0.07%
+Bitget Futures vs Gate Futures: 0.03%
+Bitget Futures vs Binance Futures: 0.08%
+Bitget Futures vs BingX Spot: 0.12%
+Gate Futures vs Binance Futures: 0.05%
+Gate Futures vs BingX Spot: 0.10%
+Binance Futures vs BingX Spot: 0.04%
+
+ANIME:
+MEXC Spot vs MEXC Futures: 0.42%
+MEXC Spot vs Bitget Futures: 0.10%
+MEXC Spot vs Gate Futures: 0.21%
+MEXC Spot vs Binance Futures: 0.21%
+MEXC Futures vs Bitget Futures: 0.52%
+MEXC Futures vs Gate Futures: 0.21%
+MEXC Futures vs Binance Futures: 0.21%
+MEXC Futures vs BingX Spot: 0.52%
+Bitget Futures vs Gate Futures: 0.31%
+Bitget Futures vs Binance Futures: 0.31%
+Bitget Futures vs BingX Spot: 0.00%
+Gate Futures vs Binance Futures: 0.00%
+Gate Futures vs BingX Spot: 0.31%
+Binance Futures vs BingX Spot: 0.31%
+
+VR:
+MEXC Spot vs MEXC Futures: 0.79%
+
+MET:
+MEXC Futures vs Gate Futures: 0.14%
+MEXC Futures vs Binance Futures: 0.03%
+MEXC Futures vs BingX Spot: 142.90%
+Gate Futures vs Binance Futures: 0.11%
+Gate Futures vs BingX Spot: 142.97%
+Binance Futures vs BingX Spot: 142.91%
+
+FLOKI:
+MEXC Spot vs MEXC Futures: 0.10%
+MEXC Spot vs Bitget Futures: 0.13%
+MEXC Spot vs Gate Futures: 0.13%
+MEXC Futures vs Bitget Futures: 0.03%
+MEXC Futures vs Gate Futures: 0.03%
+MEXC Futures vs BingX Spot: 0.10%
+Bitget Futures vs Gate Futures: 0.00%
+Bitget Futures vs BingX Spot: 0.13%
+Gate Futures vs BingX Spot: 0.13%
+
+LA:
+MEXC Spot vs MEXC Futures: 0.12%
+MEXC Spot vs Bitget Futures: 0.15%
+MEXC Spot vs Gate Futures: 0.05%
+MEXC Spot vs Binance Futures: 0.26%
+MEXC Futures vs Bitget Futures: 0.03%
+MEXC Futures vs Gate Futures: 0.17%
+MEXC Futures vs Binance Futures: 0.14%
+MEXC Futures vs BingX Spot: 0.00%
+Bitget Futures vs Gate Futures: 0.21%
+Bitget Futures vs Binance Futures: 0.10%
+Bitget Futures vs BingX Spot: 0.03%
+Gate Futures vs Binance Futures: 0.31%
+Gate Futures vs BingX Spot: 0.17%
+Binance Futures vs BingX Spot: 0.14%
+
+BRETT:
+MEXC Futures vs Bitget Futures: 0.03%
+MEXC Futures vs Gate Futures: 0.19%
+MEXC Futures vs Binance Futures: 0.12%
+MEXC Futures vs BingX Spot: 0.28%
+Bitget Futures vs Gate Futures: 0.16%
+Bitget Futures vs Binance Futures: 0.16%
+Bitget Futures vs BingX Spot: 0.25%
+Gate Futures vs Binance Futures: 0.31%
+Gate Futures vs BingX Spot: 0.09%
+Binance Futures vs BingX Spot: 0.40%
+
+XAI:
+MEXC Spot vs MEXC Futures: 0.22%
+MEXC Spot vs Bitget Futures: 0.11%
+MEXC Spot vs Gate Futures: 0.22%
+MEXC Spot vs Binance Futures: 0.04%
+MEXC Futures vs Bitget Futures: 0.11%
+MEXC Futures vs Gate Futures: 0.00%
+MEXC Futures vs Binance Futures: 0.18%
+MEXC Futures vs BingX Spot: 0.04%
+Bitget Futures vs Gate Futures: 0.11%
+Bitget Futures vs Binance Futures: 0.07%
+Bitget Futures vs BingX Spot: 0.07%
+Gate Futures vs Binance Futures: 0.18%
+Gate Futures vs BingX Spot: 0.04%
+Binance Futures vs BingX Spot: 0.15%
+
+NEAR:
+MEXC Spot vs MEXC Futures: 0.04%
+MEXC Spot vs Bitget Futures: 0.13%
+MEXC Spot vs Gate Futures: 0.09%
 MEXC Spot vs Binance Futures: 0.04%
 MEXC Futures vs Bitget Futures: 0.09%
 MEXC Futures vs Gate Futures: 0.04%
-MEXC Futures vs Binance Futures: 0.04%
-MEXC Futures vs BingX Spot: 0.00%
-Bitget Futures vs Gate Futures: 0.13%
-Bitget Futures vs Binance Futures: 0.04%
-Bitget Futures vs BingX Spot: 0.09%
-Gate Futures vs Binance Futures: 0.09%
-Gate Futures vs BingX Spot: 0.04%
-Binance Futures vs BingX Spot: 0.04%
-
-XEC:
-MEXC Spot vs MEXC Futures: 0.06%
-MEXC Spot vs Gate Futures: 0.28%
-MEXC Futures vs Gate Futures: 0.33%
-MEXC Futures vs BingX Spot: 0.11%
-Gate Futures vs BingX Spot: 0.22%
-
-CGPT:
-MEXC Spot vs MEXC Futures: 0.07%
-MEXC Spot vs Bitget Futures: 0.01%
-MEXC Spot vs Gate Futures: 0.01%
-MEXC Spot vs Binance Futures: 0.15%
-MEXC Futures vs Bitget Futures: 0.06%
-MEXC Futures vs Gate Futures: 0.08%
-MEXC Futures vs Binance Futures: 0.08%
-MEXC Futures vs BingX Spot: 0.01%
-Bitget Futures vs Gate Futures: 0.01%
-Bitget Futures vs Binance Futures: 0.14%
-Bitget Futures vs BingX Spot: 0.08%
-Gate Futures vs Binance Futures: 0.15%
-Gate Futures vs BingX Spot: 0.09%
-Binance Futures vs BingX Spot: 0.06%
-
-AVNT:
-MEXC Spot vs MEXC Futures: 0.04%
-MEXC Spot vs Bitget Futures: 0.17%
-MEXC Spot vs Gate Futures: 0.11%
-MEXC Spot vs Binance Futures: 0.05%
-MEXC Futures vs Bitget Futures: 0.20%
-MEXC Futures vs Gate Futures: 0.14%
-MEXC Futures vs Binance Futures: 0.01%
-MEXC Futures vs BingX Spot: 0.20%
-Bitget Futures vs Gate Futures: 0.06%
-Bitget Futures vs Binance Futures: 0.22%
-Bitget Futures vs BingX Spot: 0.01%
-Gate Futures vs Binance Futures: 0.16%
-Gate Futures vs BingX Spot: 0.05%
-Binance Futures vs BingX Spot: 0.21%
-
-HYPER:
-MEXC Spot vs MEXC Futures: 0.14%
-MEXC Spot vs Bitget Futures: 0.10%
-MEXC Spot vs Gate Futures: 0.14%
-MEXC Spot vs Binance Futures: 0.14%
-MEXC Futures vs Bitget Futures: 0.04%
-MEXC Futures vs Gate Futures: 0.00%
 MEXC Futures vs Binance Futures: 0.00%
+MEXC Futures vs BingX Spot: 0.00%
 Bitget Futures vs Gate Futures: 0.04%
-Bitget Futures vs Binance Futures: 0.04%
-Gate Futures vs Binance Futures: 0.00%
+Bitget Futures vs Binance Futures: 0.09%
+Bitget Futures vs BingX Spot: 0.09%
+Gate Futures vs Binance Futures: 0.04%
+Gate Futures vs BingX Spot: 0.04%
+Binance Futures vs BingX Spot: 0.00%
 
-PYTH:
-MEXC Spot vs MEXC Futures: 0.06%
-MEXC Spot vs Bitget Futures: 0.06%
-MEXC Spot vs Gate Futures: 0.08%
-MEXC Spot vs Binance Futures: 0.08%
-MEXC Futures vs Bitget Futures: 0.00%
-MEXC Futures vs Gate Futures: 0.02%
-MEXC Futures vs Binance Futures: 0.02%
-MEXC Futures vs BingX Spot: 0.06%
-Bitget Futures vs Gate Futures: 0.02%
-Bitget Futures vs Binance Futures: 0.02%
-Bitget Futures vs BingX Spot: 0.06%
-Gate Futures vs Binance Futures: 0.00%
-Gate Futures vs BingX Spot: 0.08%
-Binance Futures vs BingX Spot: 0.08%
+SOLO:
+MEXC Spot vs MEXC Futures: 0.39%
+MEXC Spot vs Gate Futures: 0.09%
+MEXC Futures vs Gate Futures: 0.30%
+MEXC Futures vs BingX Spot: 0.50%
+Gate Futures vs BingX Spot: 0.20%
 
-ALGOUSDC:
-MEXC Spot vs MEXC Futures: 0.14%
-
-WAI:
-MEXC Spot vs Bitget Futures: 0.46%
-
-HNT:
-MEXC Spot vs MEXC Futures: 0.15%
-MEXC Spot vs Bitget Futures: 0.07%
-MEXC Spot vs Gate Futures: 0.04%
-MEXC Futures vs Bitget Futures: 0.07%
-MEXC Futures vs Gate Futures: 0.11%
-MEXC Futures vs BingX Spot: 1.48%
-Bitget Futures vs Gate Futures: 0.04%
-Bitget Futures vs BingX Spot: 1.40%
-Gate Futures vs BingX Spot: 1.37%
-
-BNB:
-MEXC Spot vs MEXC Futures: 0.11%
+PHB:
+MEXC Spot vs MEXC Futures: 0.24%
 MEXC Spot vs Bitget Futures: 0.08%
 MEXC Spot vs Gate Futures: 0.08%
-MEXC Spot vs Binance Futures: 0.03%
-MEXC Futures vs Bitget Futures: 0.04%
-MEXC Futures vs Gate Futures: 0.04%
-MEXC Futures vs Binance Futures: 0.08%
+MEXC Spot vs Binance Futures: 0.08%
+MEXC Futures vs Bitget Futures: 0.16%
+MEXC Futures vs Gate Futures: 0.16%
+MEXC Futures vs Binance Futures: 0.16%
 MEXC Futures vs BingX Spot: 0.03%
 Bitget Futures vs Gate Futures: 0.00%
-Bitget Futures vs Binance Futures: 0.05%
-Bitget Futures vs BingX Spot: 0.00%
-Gate Futures vs Binance Futures: 0.05%
+Bitget Futures vs Binance Futures: 0.00%
+Bitget Futures vs BingX Spot: 0.13%
+Gate Futures vs Binance Futures: 0.00%
+Gate Futures vs BingX Spot: 0.13%
+Binance Futures vs BingX Spot: 0.13%
+
+GLMR:
+MEXC Spot vs MEXC Futures: 0.30%
+MEXC Spot vs Gate Futures: 0.66%
+MEXC Futures vs Gate Futures: 0.96%
+
+BNBUSDC:
+MEXC Spot vs MEXC Futures: 0.09%
+MEXC Spot vs Binance Futures: 0.04%
+MEXC Futures vs Binance Futures: 0.05%
+
+BLAST:
+MEXC Spot vs MEXC Futures: 0.13%
+MEXC Spot vs Bitget Futures: 0.07%
+MEXC Spot vs Gate Futures: 0.07%
+MEXC Futures vs Bitget Futures: 0.07%
+MEXC Futures vs Gate Futures: 0.20%
+MEXC Futures vs BingX Spot: 0.20%
+Bitget Futures vs Gate Futures: 0.13%
+Bitget Futures vs BingX Spot: 0.13%
 Gate Futures vs BingX Spot: 0.00%
-Binance Futures vs BingX Spot: 0.05%
 
-TSLAX:
-MEXC Spot vs Gate Futures: 0.08%
-Gate Futures vs BingX Spot: 0.12%
+BICO:
+MEXC Spot vs MEXC Futures: 0.06%
+MEXC Spot vs Bitget Futures: 0.09%
+MEXC Spot vs Gate Futures: 0.23%
+MEXC Spot vs Binance Futures: 0.08%
+MEXC Futures vs Bitget Futures: 0.03%
+MEXC Futures vs Gate Futures: 0.29%
+MEXC Futures vs Binance Futures: 0.02%
+MEXC Futures vs BingX Spot: 0.11%
+Bitget Futures vs Gate Futures: 0.32%
+Bitget Futures vs Binance Futures: 0.02%
+Bitget Futures vs BingX Spot: 0.08%
+Gate Futures vs Binance Futures: 0.30%
+Gate Futures vs BingX Spot: 0.39%
+Binance Futures vs BingX Spot: 0.09%
 
-RWA:
-MEXC Spot vs MEXC Futures: 0.12%
-MEXC Futures vs BingX Spot: 0.28%
-
-CPOOL:
-MEXC Spot vs MEXC Futures: 0.07%
-MEXC Spot vs Gate Futures: 0.43%
-MEXC Futures vs Gate Futures: 0.36%
-MEXC Futures vs BingX Spot: 0.48%
-Gate Futures vs BingX Spot: 0.84%
-
-A8:
+SWELL:
 MEXC Spot vs MEXC Futures: 0.27%
-MEXC Spot vs Gate Futures: 0.04%
-MEXC Futures vs Gate Futures: 0.23%
-
-GATA:
-MEXC Spot vs MEXC Futures: 0.19%
-MEXC Spot vs Gate Futures: 0.52%
-MEXC Futures vs Gate Futures: 0.71%
-MEXC Futures vs BingX Spot: 0.14%
-Gate Futures vs BingX Spot: 0.85%
+MEXC Spot vs Bitget Futures: 0.46%
+MEXC Spot vs Gate Futures: 0.24%
+MEXC Spot vs Binance Futures: 0.27%
+MEXC Futures vs Bitget Futures: 0.19%
+MEXC Futures vs Gate Futures: 0.03%
+MEXC Futures vs Binance Futures: 0.00%
+MEXC Futures vs BingX Spot: 0.19%
+Bitget Futures vs Gate Futures: 0.22%
+Bitget Futures vs Binance Futures: 0.19%
+Bitget Futures vs BingX Spot: 0.38%
+Gate Futures vs Binance Futures: 0.03%
+Gate Futures vs BingX Spot: 0.16%
+Binance Futures vs BingX Spot: 0.19%
