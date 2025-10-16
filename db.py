@@ -2,12 +2,13 @@
 import asyncio
 import os
 import logging
-logger = logging.getLogger("bot")
 from datetime import datetime, timedelta, timezone
 from typing import Dict, Any, List
 from sqlalchemy import Column, Integer, String, DateTime, select
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.orm import declarative_base, sessionmaker
+
+logger = logging.getLogger("bot")
 
 # --- ПУТЬ К БАЗЕ ---
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -19,7 +20,7 @@ engine = create_async_engine(
     DATABASE_URL,
     echo=False,
     pool_pre_ping=True,
-    pool_recycle=1800,  # 💡 обновляем соединение каждые 30 минут
+    pool_recycle=1800,  # 💡 обновляем соединения каждые 30 минут
     future=True,
 )
 
@@ -29,7 +30,7 @@ async_session = sessionmaker(
 
 Base = declarative_base()
 
-
+# --- МОДЕЛЬ ---
 class User(Base):
     __tablename__ = "users"
 
@@ -37,19 +38,19 @@ class User(Base):
     registered = Column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
     trial_end = Column(DateTime(timezone=True), nullable=True)
     subscription = Column(Integer, default=0)  # 0/1
-    filter_value = Column("filter", String, nullable=True)  # вместо filter     # "5-12%" / "12-19%" / "19%+"
-    notify = Column(Integer, default=1)        # 1=получать уведомления, 0=стоп
+    filter_value = Column("filter", String, nullable=True)  # "5-12%" / "12-19%" / "19%+"
+    notify = Column(Integer, default=1)  # 1=получать уведомления, 0=стоп
 
 
 # --- ИНИЦИАЛИЗАЦИЯ ---
 async def init_db():
-    logger = logging.getLogger("bot")
+    """Создание базы и включение WAL"""
     logger.info(f"Использую базу: {DB_PATH}")
-
     async with engine.begin() as conn:
         # включаем WAL режим для sqlite
         await conn.exec_driver_sql("PRAGMA journal_mode=WAL;")
         await conn.run_sync(Base.metadata.create_all)
+
         # ensure notify column exists
         try:
             res = await conn.exec_driver_sql("PRAGMA table_info('users')")
@@ -87,33 +88,27 @@ async def update_user(user_id: int, **kwargs) -> User | None:
         if not user:
             return None
 
-        # Log incoming kwargs for debugging (who is trying to change what)
         logger.info(f"[DB:update_user] user_id={user_id} incoming kwargs={kwargs!r}")
 
-        # Support callers that may send old key 'filter' by mistake
+        # старое имя ключа filter → filter_value
         if "filter" in kwargs and "filter_value" not in kwargs:
             kwargs["filter_value"] = kwargs.pop("filter")
 
-        # Defensive check: ignore accidental UI strings like "⚙️ Фильтры"
+        # защита от случайных строк типа "⚙️ Фильтры"
         if "filter_value" in kwargs:
             fv = kwargs.get("filter_value")
             if isinstance(fv, str):
                 fv_stripped = fv.strip()
-                # if the value looks like the UI label rather than a real filter, ignore it
                 if "Фильтр" in fv_stripped or "Фильтры" in fv_stripped or "⚙" in fv_stripped:
                     logger.warning(f"[DB:update_user] Ignoring suspicious filter_value update for user {user_id}: {fv!r}")
                     kwargs.pop("filter_value", None)
 
-        # Apply updates
         for key, value in kwargs.items():
             setattr(user, key, value)
 
         await session.commit()
-
-        # push to cache and log new state
         await upsert_user_in_cache(user)
-        logger.info(f"[DB:update_user] user_id={user_id} after update filter_value={getattr(user, 'filter_value', None)!r} kwargs={kwargs!r}")
-
+        logger.info(f"[DB:update_user] user_id={user_id} updated with {kwargs!r}")
         return user
 
 
@@ -136,13 +131,10 @@ USERS_CACHE: Dict[int, Dict[str, Any]] = {}
 
 
 async def load_users_cache():
-    """
-    Полная загрузка всех пользователей в кэш
-    """
+    """Полная загрузка всех пользователей в кэш"""
     global USERS_CACHE
     users = await get_all_users_full()
 
-    logger = logging.getLogger("bot")
     logger.info(f"[DB] get_all_users_full вернул: {len(users)} строк")
 
     def parse_dt(val: Any) -> datetime | None:
@@ -170,13 +162,13 @@ async def load_users_cache():
             "notify": 1 if getattr(u, "notify", None) is None else int(u.notify),
         }
 
-
     USERS_CACHE.clear()
     USERS_CACHE.update(new_cache)
     logger.info(f"[DB] USERS_CACHE заполнен: {len(USERS_CACHE)} записей")
 
 
 async def refresh_users_cache_periodically(interval_seconds: int = 300):
+    """Периодическая перезагрузка кэша"""
     while True:
         try:
             await load_users_cache()
@@ -191,13 +183,13 @@ async def upsert_user_in_cache(user: User):
         "trial_end": user.trial_end if user.trial_end and user.trial_end.tzinfo else (
             user.trial_end.replace(tzinfo=timezone.utc) if user.trial_end else None
         ),
-        "filter": user.filter_value or "5-12%",   # 🔥 исправлено
+        "filter": user.filter_value or "5-12%",
         "notify": 1 if getattr(user, "notify", None) is None else int(user.notify),
     }
 
 
-
 def has_active_subscription(info: dict) -> bool:
+    """Проверка, есть ли активная подписка или пробный период"""
     if not info:
         return False
 
@@ -209,3 +201,12 @@ def has_active_subscription(info: dict) -> bool:
         return True
 
     return False
+
+
+# --- ДОБАВЛЕНО ---
+async def get_users_count() -> int:
+    """Возвращает количество пользователей в БД"""
+    async with async_session() as session:
+        stmt = select(User.user_id)
+        res = await session.execute(stmt)
+        return len(res.fetchall())

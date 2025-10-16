@@ -57,6 +57,33 @@ handler = TimedRotatingFileHandler(
 handler.setFormatter(log_formatter)
 root_logger = logging.getLogger()
 root_logger.addHandler(handler)
+# ---------- ФИЛЬТР ШУМА В ЛОГАХ ----------
+
+class CleanLogFilter(logging.Filter):
+    """Фильтрует неважные строки, чтобы не засорять консоль и bot.log."""
+    def filter(self, record: logging.LogRecord) -> bool:
+        msg = record.getMessage()
+
+        # фразы, которые мы скрываем
+        skip_patterns = [
+            "[DB]",                   # внутренние операции базы
+            "[DEBUG MESSAGE FLOW]",   # сообщения пользователя
+            "USERS_CACHE sample",     # примеры кэша
+            "USERS_CACHE заполнен",
+            "Загружено сырых данных", # промежуточные шаги
+            "После нормализации",
+            "После фильтрации",
+            "MATCH", "NO MATCH",      # биржевые статусы
+            "[mexc_status]",
+            "[binance_status]",
+            "incoming kwargs=",       # update_user spam
+        ]
+
+        return not any(pat in msg for pat in skip_patterns)
+
+# применяем фильтр ко всем хэндлерам
+for h in root_logger.handlers:
+    h.addFilter(CleanLogFilter())
 # приглушаем слишком болтливые библиотеки
 logging.getLogger("apscheduler").setLevel(logging.WARNING)
 logging.getLogger("telebot").setLevel(logging.WARNING)
@@ -434,7 +461,7 @@ async def _check_and_alert():
                             if user_id not in LAST_ALERTS:
                                 LAST_ALERTS[user_id] = {}
                             LAST_ALERTS[user_id][symbol] = (now, spread_percent)
-                            logger.info(f"[{symbol}] user {user_id} — отправлено сообщение с {len(entries)} спредами")
+                            logger.debug(f"[{symbol}] user {user_id} — отправлено сообщение с {len(entries)} спредами")
                         info["collected_spreads"].pop(symbol, None)
             except Exception as e:
                 logger.warning(f"Ошибка при обработке монеты {symbol}: {e}")
@@ -590,7 +617,7 @@ async def main_menu_handler(message):
 
     elif text in {"5-12%", "12-19%", "19%+"}:
         new_filter = text.strip()
-        logger.info(f"[ФИЛЬТР DEBUG] user_id={user_id} выбрал фильтр {new_filter}")
+        logger.debug(f"[ФИЛЬТР DEBUG] user_id={user_id} выбрал фильтр {new_filter}")
         await update_user(user_id, filter=new_filter)
         await load_users_cache()
         logger.info(f"[ФИЛЬТР DEBUG] USERS_CACHE[{user_id}] -> {USERS_CACHE.get(user_id)}")
@@ -784,8 +811,27 @@ async def main():
         misfire_grace_time=30,
         id="check_and_alert"
     )
-    await maintenance.start_background_tasks(bot)
-    scheduler.start()
+    try:
+        await maintenance.start_background_tasks(bot)
+    except Exception as e:
+        err = ''.join(traceback.format_exception(type(e), e, e.__traceback__))
+        logger.exception(f"maintenance.start_background_tasks failed: {err}")
+        try:
+            await safe_send_admin(bot, f"❌ maintenance.start_background_tasks failed:\n{err}")
+        except Exception:
+            pass
+        raise
+
+    try:
+        scheduler.start()
+    except Exception as e:
+        err = ''.join(traceback.format_exception(type(e), e, e.__traceback__))
+        logger.exception(f"scheduler.start failed: {err}")
+        try:
+            await safe_send_admin(bot, f"❌ scheduler.start failed:\n{err}")
+        except Exception:
+            pass
+        raise
 
     logger.info("🤖 Бот запущен.")
     await bot.infinity_polling(skip_pending=True)
